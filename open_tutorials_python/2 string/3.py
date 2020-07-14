@@ -1,0 +1,6 @@
+print('hello world'.capitalize())
+print('hello world'.upper())
+print('hello world'.__len__())
+print(len('hello world'))
+print(len('he')+len('al'))
+print('hello wrld'.replace('hello', 'juice'))

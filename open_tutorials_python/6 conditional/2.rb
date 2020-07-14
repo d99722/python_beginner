@@ -1,0 +1,6 @@
+real = 11
+input = 11
+
+if real == input
+  puts("hello!")
+end

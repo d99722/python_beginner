@@ -1,0 +1,340 @@
+{\rtf1\ansi\ansicpg949\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Regular;\f1\fnil\fcharset129 AppleSDGothicNeo-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11000\viewh19580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs40 \cf0 ch7-2. \'c1\'a4\'b1\'d4 \'c7\'a5\'c7\'f6\'bd\'c4 \'bd\'c3\'c0\'db\'c7\'cf\'b1\'e2\
+\
+
+\f1\b \ul ** \'c1\'a4\'b1\'d4 \'c7\'a5\'c7\'f6\'bd\'c4\'c0\'c7 \'b1\'e2\'c3\'ca, \'b8\'de\'c5\'b8\'b9\'ae\'c0\'da
+\f0\b0 \ulnone \
+- \'c1\'a4\'b1\'d4 \'c7\'a5\'c7\'f6\'bd\'c4\'bf\'a1\'bc\'ad \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'b8\'de\'c5\'b8 \'b9\'ae\'c0\'da (meta characters)\'bf\'a1\'b4\'c2 \'b4\'d9\'c0\'bd\'b0\'fa \'b0\'b0\'c0\'ba \'b0\'cd\'c0\'cc \'c0\'d6\'b4\'d9.\
+. ^ $ * + ? \{ \} [ ] \\ | ( )\
+\
+
+\f1\b * \'b9\'ae\'c0\'da\'c5\'ac\'b7\'a1\'bd\'ba [] character class
+\f0\b0 \
+- [ ] \'bb\'e7\'c0\'cc\'c0\'c7 \'b9\'ae\'c0\'da\'b5\'e9\'b0\'fa \'b8\'c5\'c4\'a1\
+- [abc] : a, b, c \'c1\'df \'c7\'d1 \'b0\'b3\'c0\'c7 \'b9\'ae\'c0\'da\'bf\'cd \'b8\'c5\'c4\'a1\
+ex\
+[abc]\
+a : yes - a\'b0\'a1 \'c6\'f7\'c7\'d4\'b5\'ca!\
+before : yes - b\'b0\'a1 \'c6\'f7\'c7\'d4\'b5\'ca!\
+dude : no - a, b, c \'c1\'df \'be\'ee\'b4\'c0 \'c7\'cf\'b3\'aa\'b5\'b5 \'c6\'f7\'c7\'d4\'b5\'c7\'be\'ee \'c0\'d6\'c1\'f6 \'be\'ca\'b4\'d9.\
+\
+- [ ] \'be\'c8\'c0\'c7 \'b5\'ce \'b9\'ae\'c0\'da \'bb\'e7\'c0\'cc\'bf\'a1 \'c7\'cf\'c0\'cc\'c7\'c2 (-)\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9 \'b5\'ce \'b9\'ae\'c0\'da \'bb\'e7\'c0\'cc\'c0\'c7 \'b9\'fc\'c0\'a7 (From - To)\'b8\'a6 \'c0\'c7\'b9\'cc\'c7\'d1\'b4\'d9 \'a1\'a6 [a-c] = [abc] , [0-5] = [012345]\
+- [a-zA-Z] : \'be\'cb\'c6\'c4\'ba\'aa \'b8\'f0\'b5\'ce\
+- [0-9] : \'bc\'fd\'c0\'da\
+- ^\'c0\'ba not\'c0\'c7 \'c0\'c7\'b9\'cc\'b8\'a6 \'b0\'a1\'c1\'f8\'b4\'d9 \'a1\'a6 [^0-9] : \'bc\'fd\'c0\'da\'b0\'a1 \'be\'c6\'b4\'d1 \'b9\'ae\'c0\'da\'b8\'b8 \'b8\'c5\'c4\'aa\
+\
+
+\f1\b * \'c0\'da\'c1\'d6 \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'b9\'ae\'c0\'da \'c5\'ac\'b7\'a1\'bd\'ba
+\f0\b0 \
+- \'b6\'c7\'c7\'d1, \'ba\'b0\'b5\'b5\'c0\'c7 \'c7\'a5\'b1\'e2\'b9\'fd\'c0\'cc \'b5\'fb\'b7\'ce \'c1\'b8\'c0\'e7\'c7\'cf\'b4\'c2 \'b0\'e6\'bf\'ec\'b5\'b5 \'c0\'d6\'b4\'d9.\
+\\d : \'bc\'fd\'c0\'da = [0-9]\
+\\D : \'bc\'fd\'c0\'da\'b0\'a1 \'be\'c6\'b4\'d1 \'b0\'cd = [^0-9]\
+\\s : whitespace \'b9\'ae\'c0\'da (\'bd\'ba\'c6\'e4\'c0\'cc\'bd\'ba, \'c5\'c7 \'b5\'ee \'b0\'f8\'b9\'e9) = [ \\t\\n\\r\\f\\v]\
+\\S : whitespace\'b0\'a1 \'be\'c6\'b4\'d1 \'b0\'cd = [^ \\t\\n\\r\\f\\v]\
+\\w : \'b9\'ae\'c0\'da+\'bc\'fd\'c0\'da\'bf\'cd \'b8\'c5\'c4\'a1 = [a-zA-Z0-9_]\
+\\W : \'b9\'ae\'c0\'da+\'bc\'fd\'c0\'da\'b0\'a1 \'be\'c6\'b4\'d1\'b0\'cd\'b0\'fa \'b8\'c5\'c4\'a1 = [^a-zA-Z0-9_]\
+- \'c1\'ef, \'b4\'eb\'b9\'ae\'c0\'da\'b7\'ce \'c7\'a5\'b1\'e2\'b5\'c8 \'b0\'cd\'c0\'ba \'bc\'d2\'b9\'ae\'c0\'da\'c0\'c7 \'b9\'dd\'b4\'eb\'c0\'cc\'b4\'d9.\
+\
+
+\f1\b * Dot(.)
+\f0\b0 \
+- \'c1\'d9\'b9\'d9\'b2\'de \'b9\'ae\'c0\'da\'c0\'ce \\n\'c0\'bb \'c1\'a6\'bf\'dc\'c7\'d1 \'b8\'f0\'b5\'e7 \'b9\'ae\'c0\'da\'bf\'cd \'b8\'c5\'c4\'a1\'b5\'ca\
+a.b : a\'bf\'cd b\'b6\'f3\'b4\'c2 \'b9\'ae\'c0\'da \'bb\'e7\'c0\'cc\'bf\'a1 \'be\'ee\'b6\'b2 \'b9\'ae\'c0\'da\'b0\'a1 \'b5\'e9\'be\'ee\'b0\'a1\'b5\'b5 \'b8\'f0\'b5\'ce \'b8\'c5\'c4\'a1\'b5\'c8\'b4\'d9\'b4\'c2 \'c0\'c7\'b9\'cc\'c0\'cc\'b4\'d9.\
+ex\
+a.b\
+aab : Yes : \'b0\'a1\'bf\'ee\'b5\'a5 \'b9\'ae\'c0\'da a\'b0\'a1 \'b8\'f0\'b5\'e7 \'b9\'ae\'c0\'da\'b8\'a6 \'c0\'c7\'b9\'cc\'c7\'cf\'b4\'c2 . \'b0\'fa \'c0\'cf\'c4\'a1\
+a0b : Yes : \'c0\'a7\'bf\'cd \'b0\'b0\'c0\'bd\
+abc : No : a\'bf\'cd b\'bb\'e7\'c0\'cc\'bf\'a1 \'be\'ee\'b6\'b2 \'b9\'ae\'c0\'da\'b6\'f3\'b5\'b5 \'c7\'cf\'b3\'aa\'b4\'c2 \'c0\'d6\'be\'ee\'be\'df \'c7\'cf\'b9\'c7\'b7\'ce \'b8\'c5\'c4\'a1X\
+\
+
+\f1\b * \'b9\'dd\'ba\'b9 (*)
+\f0\b0 \
+ca*t : *\'b9\'ae\'c0\'da \'b9\'d9\'b7\'ce \'be\'d5\'bf\'a1 \'c0\'d6\'b4\'c2 a\'b0\'a1 0\'b9\'f8 \'c0\'cc\'bb\'f3 \'b9\'dd\'ba\'b9\'b5\'c7\'b8\'e9 \'b8\'c5\'c4\'a1\
+ex\
+ca*t\
+ct : Yes : a\'c0\'c7 0\'b9\'f8 \'b9\'dd\'ba\'b9\'c0\'cc\'b9\'c7\'b7\'ce \'b8\'c5\'c4\'a1\
+cat : Yes : a\'c0\'c7 1\'b9\'f8 \'b9\'dd\'ba\'b9\'c0\'cc\'b9\'c7\'b7\'ce \'b8\'c5\'c4\'a1\
+caaat : Yes : a\'c0\'c7 3\'b9\'f8 \'b9\'dd\'ba\'b9\'c0\'cc\'b9\'c7\'b7\'ce \'b8\'c5\'c4\'a1\
+\
+
+\f1\b * \'b9\'dd\'ba\'b9 (+)
+\f0\b0 \
+- *\'b0\'a1 0\'c8\'b8 \'c0\'cc\'bb\'f3\'c0\'cc\'b6\'f3\'b8\'e9 +\'b4\'c2 1\'c8\'b8 \'c0\'cc\'bb\'f3\'ba\'ce\'c5\'cd!\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 ex\
+ca+t\
+ct : No : a\'c0\'c7 0\'b9\'f8 \'b9\'dd\'ba\'b9\'c0\'cc\'b9\'c7\'b7\'ce \'b8\'c5\'c4\'a1X\
+cat : Yes : a\'c0\'c7 1\'b9\'f8 \'b9\'dd\'ba\'b9\'c0\'cc\'b9\'c7\'b7\'ce \'b8\'c5\'c4\'a1\
+caaat : Yes : a\'c0\'c7 3\'b9\'f8 \'b9\'dd\'ba\'b9\'c0\'cc\'b9\'c7\'b7\'ce \'b8\'c5\'c4\'a1\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+
+\f1\b * \'b9\'dd\'ba\'b9(\{m,n\},?)
+\f0\b0 \
+- \'b9\'dd\'ba\'b9\'c8\'b8\'bc\'f6\'b8\'a6 \'b0\'ed\'c1\'a4\'c7\'cf\'b0\'ed \'bd\'cd\'c0\'bb \'b6\'a7 \'bb\'e7\'bf\'eb\'c7\'d1\'b4\'d9.\
+-m\'ba\'ce\'c5\'cd n\'c8\'b8, m\'c0\'cc\'b3\'aa n\'c0\'ba \'bb\'fd\'b7\'ab \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+\
+1. \{m\}\
+ca\{2\}t : a\'b0\'a1 \'b5\'ce\'b9\'f8 \'b9\'dd\'ba\'b9\'b5\'c7\'b8\'e9 \'b8\'c5\'c4\'a1 \'a1\'a6\
+\
+2. \{m,n\}\
+ca\{2,5\}t : a\'b0\'a1 2~5\'b9\'f8 \'b9\'dd\'ba\'b9\'b5\'c7\'b8\'e9 \'b8\'c5\'c4\'a1\
+\
+3. ?\
+- \'c0\'d6\'be\'ee\'b5\'b5 \'b5\'c7\'b0\'ed \'be\'f8\'be\'ee\'b5\'b5 \'b5\'ca\'a1\'a6 \{0,1\}\'b0\'fa \'b0\'b0\'b4\'d9!\
+\
+- *, +, ? \'b8\'f0\'b5\'ce \{m,n\} \'c7\'fc\'c5\'c2\'b7\'ce \'b0\'ed\'c3\'c4 \'be\'b2\'b4\'c2 \'b0\'cd\'c0\'cc \'b0\'a1\'b4\'c9\'c7\'cf\'c1\'f6\'b8\'b8, \'b0\'a1\'b1\'de\'c0\'fb \'c0\'cc\'c7\'d8\'c7\'cf\'b1\'e2 \'bd\'b1\'b0\'ed \'c7\'a5\'c7\'f6\'b5\'b5 \'b0\'a3\'b0\'e1\'c7\'d1 *, +, ?\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'cc \'c1\'c1\'b4\'d9.\
+\
+
+\f1\b \ul ** \'c6\'c4\'c0\'cc\'bd\'e3\'bf\'a1\'bc\'ad \'c1\'a4\'b1\'d4 \'c7\'a5\'c7\'f6\'bd\'c4\'c0\'bb \'c1\'f6\'bf\'f8\'c7\'cf\'b4\'c2 re \'b8\'f0\'b5\'e2
+\f0\b0 \ulnone \
+- \'c6\'c4\'c0\'cc\'bd\'e3\'c0\'ba \'c1\'a4\'b1\'d4 \'c7\'a5\'c7\'f6\'bd\'c4\'c0\'bb \'c1\'f6\'bf\'f8\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d8 re(regular expression)\'b8\'f0\'b5\'e2\'c0\'bb \'c1\'a6\'b0\'f8\'c7\'d1\'b4\'d9. \'b1\'e2\'ba\'bb\'b6\'f3\'c0\'cc\'ba\'ea\'b7\'af\'b8\'ae!\
+\
+import re\
+p = re.compile(\'a1\'aeab*\'a1\'af)\
+\
+- re.compile\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'cf\'bf\'a9 \'c1\'a4\'b1\'d4\'c7\'a5\'c7\'f6\'bd\'c4\'c0\'bb \'c4\'c4\'c6\'c4\'c0\'cf \'c7\'d1\'b4\'d9.\
+- \'b1\'d7 \'b0\'e1\'b0\'fa\'b7\'ce \'b5\'b9\'b7\'c1\'c1\'d6\'b4\'c2 \'b0\'b4\'c3\'bc p\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'bf\'a9, \'b1\'d7 \'c0\'cc\'c8\'c4\'c0\'c7 \'c0\'db\'be\'f7\'c0\'bb \'bc\'f6\'c7\'e0\'c7\'d1\'b4\'d9.\
+\
+
+\f1\b \ul ** \'c1\'a4\'b1\'d4\'bd\'c4\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d1 \'b9\'ae\'c0\'da\'bf\'ad \'b0\'cb\'bb\'f6
+\f0\b0 \ulnone \
+match() : \'b9\'ae\'c0\'da\'bf\'ad\'c0\'c7 \'c3\'b3\'c0\'bd\'ba\'ce\'c5\'cd \'c1\'a4\'b1\'d4\'bd\'c4\'b0\'fa \'b8\'c5\'c4\'a1\'b5\'c7\'b4\'c2\'c1\'f6 \'c1\'b6\'bb\'e7\'c7\'d1\'b4\'d9.\
+search() : \'b9\'ae\'c0\'da\'bf\'ad \'c0\'fc\'c3\'bc\'b8\'a6 \'b0\'cb\'bb\'f6\'c7\'cf\'bf\'a9 \'c1\'a4\'b1\'d4\'bd\'c4\'b0\'fa \'b8\'c5\'c4\'a1\'b5\'c7\'b4\'c2\'c1\'f6 \'c1\'b6\'bb\'e7\'c7\'d1\'b4\'d9.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 - match\'bf\'cd serach\'b4\'c2 \'b8\'c5\'c4\'a1\'b5\'c9 \'b6\'a7\'b4\'c2 match\'b0\'b4\'c3\'bc\'b8\'a6 \'b5\'b9\'b7\'c1\'c1\'d6\'b0\'ed, \'b8\'c5\'c4\'a1\'b5\'c7\'c1\'f6 \'be\'ca\'c0\'bb \'b6\'a7\'b4\'c2 none\'c0\'bb \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 findall() : \'c1\'a4\'b1\'d4\'bd\'c4\'b0\'fa \'b8\'c5\'c4\'a1\'b5\'c7\'b4\'c2 \'b8\'f0\'b5\'e7 \'b9\'ae\'c0\'da\'bf\'ad(substring)\'c0\'bb \'b8\'ae\'bd\'ba\'c6\'ae\'b7\'ce \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+finditer() : \'c1\'a4\'b1\'d4\'bd\'c4\'b0\'fa \'b8\'c5\'c4\'a1\'b5\'c7\'b4\'c2 \'b8\'f0\'b5\'e7 \'b9\'ae\'c0\'da\'bf\'ad(substring)\'c0\'bb \'b9\'dd\'ba\'b9 \'b0\'a1\'b4\'c9\'c7\'d1 \'b0\'b4\'c3\'bc\'b7\'ce \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+\
+import re\
+p = re.compile('[a-z]+')\
+\
+
+\f1\b * match
+\f0\b0 \
+m = p.match("python")\
+print(m)\
+>> 
+\f2\fs36 \cf2 \CocoaLigature0 <re.Match object; span=(0, 6), match='python'>\
+
+\f0\fs40 \cf0 \CocoaLigature1 \
+m = p.match("3 python")\
+print(m)\
+>> None\
+- \'b9\'ae\'c0\'da\'bf\'ad \'c3\'b3\'c0\'bd\'bf\'a1 \'b3\'aa\'bf\'c0\'b4\'c2 \'b9\'ae\'c0\'da 3\'c0\'cc \'c1\'a4\'b1\'d4\'bd\'c4\'bf\'a1 \'ba\'ce\'c7\'d5\'b5\'c7\'c1\'f6 \'be\'ca\'c0\'b8\'b9\'c7\'b7\'ce None\'c0\'bb \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+\
+- match\'b8\'a6 \'c8\'b0\'bf\'eb\'c7\'d1 \'c4\'da\'b5\'e5\'b4\'c2 \'b4\'d9\'c0\'bd\'b0\'fa \'b0\'b0\'c0\'cc \'c0\'db\'bc\'ba\'b5\'c8\'b4\'d9.\
+p = re.compile(\'c1\'a4\'b1\'d4 \'c7\'a5\'c7\'f6\'bd\'c4)\
+m = p.match(\'a1\'b0\'c1\'b6\'bb\'e7\'c7\'d2 \'b9\'ae\'c0\'da\'bf\'ad\'a1\'b1)\
+if m :\
+	print(\'bd\'c7\'c7\'e0\'c7\'d2 \'b9\'ae\'c0\'e5)\
+else:\
+	print(\'bd\'c7\'c7\'e0\'c7\'d2 \'b9\'ae\'c0\'e5)\
+\
+
+\f1\b * search
+\f0\b0 \
+m = p.search("3 python")\
+print(m)\
+>> 
+\f2\fs36 \cf2 \CocoaLigature0 <re.Match object; span=(2, 8), match='python'>\
+
+\f0\fs40 \cf0 \CocoaLigature1 - \'bd\'c3\'c0\'db\'c0\'ba 3\'c0\'cc\'c1\'f6\'b8\'b8, \'bd\'c3\'c0\'db\'c0\'cc \'be\'c6\'b4\'d1 \'c0\'fc\'c3\'bc\'b8\'a6 \'b0\'cb\'bb\'e7\'c7\'cf\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1 python\'c0\'bb \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+\
+
+\f1\b * findall
+\f0\b0 \
+result = p.findall("life is too short")\
+print(result)\
+>> 
+\f2\fs36 \cf2 \CocoaLigature0 ['life', 'is', 'too', 'short']\
+
+\f0\fs40 \cf0 \CocoaLigature1 - \'b4\'dc\'be\'ee\'b8\'a6 \'b0\'a2\'b0\'a2 \'c1\'b6\'bb\'e7\'c7\'cf\'bf\'a9 \'b8\'ae\'bd\'ba\'c6\'ae\'b7\'ce \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+\
+
+\f1\b * finditer
+\f0\b0 \
+result = p.finditer("life is too short")\
+print(result)\
+for r in result:\
+    print(r)\
+>>\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs36 \cf2 \CocoaLigature0 <callable_iterator object at 0x104019580>\
+<re.Match object; span=(0, 4), match='life'>\
+<re.Match object; span=(5, 7), match='is'>\
+<re.Match object; span=(8, 11), match='too'>\
+<re.Match object; span=(12, 17), match='short'>
+\f0\fs40 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 - findall\'b0\'fa \'b0\'b0\'c1\'f6\'b8\'b8, \'b9\'dd\'ba\'b9 \'b0\'a1\'b4\'c9\'c7\'d1 \'b0\'b4\'c3\'bc\'b7\'ce \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+- \'b9\'dd\'ba\'b9\'b0\'a1\'b4\'c9\'c7\'d1 \'b0\'b4\'c3\'bc\'b0\'a1 \'c6\'f7\'c7\'d4\'c7\'cf\'b4\'c2 \'b0\'a2\'b0\'a2\'c0\'c7 \'bf\'e4\'bc\'d2\'b4\'c2 match \'b0\'b4\'c3\'bc\'c0\'cc\'b4\'d9.\
+\
+
+\f1\b \ul ** match \'b0\'b4\'c3\'bc\'c0\'c7 \'b8\'de\'bc\'ad\'b5\'e5
+\f0\b0 \ulnone \
+- \'be\'ee\'b6\'b2 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'cc \'b8\'c5\'c4\'a1\'b5\'c7\'be\'fa\'b4\'c2\'b0\'a1?, \'b8\'c5\'c4\'a1\'b5\'c8 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'c7 \'c0\'ce\'b5\'a6\'bd\'ba\'b4\'c2 \'be\'ee\'b5\'f0\'ba\'ce\'c5\'cd \'be\'ee\'b5\'f0\'b1\'ee\'c1\'f6\'c0\'ce\'b0\'a1?\
+\
+group() : \'b8\'c5\'c4\'a1\'b5\'c8 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'bb \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+start() : \'b8\'c5\'c4\'a1\'b5\'c8 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'c7 \'bd\'c3\'c0\'db \'c0\'a7\'c4\'a1\'b8\'a6 \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+end() : \'b8\'c5\'c4\'a1\'b5\'c8 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'c7 \'b3\'a1 \'c0\'a7\'c4\'a1\'b8\'a6 \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+span() : \'b8\'c5\'c4\'a1\'b5\'c8 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'c7 (\'bd\'c3\'c0\'db, \'b3\'a1)\'bf\'a1 \'c7\'d8\'b4\'e7\'c7\'cf\'b4\'c2 \'c6\'a9\'c7\'c3\'c0\'bb \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+\
+\
+m = p.match("python")\
+m.group() >>> \'a1\'aepython\'a1\'af\
+m.start() >>> 0\
+m.end() >>> 6\
+m.span() >>> (0,6)\
+\
+
+\f1\b * \'b8\'f0\'b5\'e2 \'b4\'dc\'c0\'a7\'b7\'ce \'bc\'f6\'c7\'e0\'c7\'cf\'b1\'e2
+\f0\b0 \
+p = re.compile(\'a1\'ae[a-z]+\'a1\'af)\
+m = p.match(\'a1\'b0python\'a1\'b1)\
+\'c0\'bb\
+m = re.match(\'a1\'ae[a-z]+\'a1\'af, \'a1\'b0python\'a1\'b1)\
+\'c0\'cc\'b7\'b1\'bd\'c4\'c0\'b8\'b7\'ce \'c7\'d1\'b9\'e6\'bf\'a1 \'c3\'b3\'b8\'ae\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\'c7\'d1\'b9\'f8 \'b8\'b8\'b5\'e7 \'c6\'d0\'c5\'cf\'c0\'bb \'bf\'a9\'b7\'af\'b9\'f8 \'bb\'e7\'bf\'eb\'c7\'d2 \'b6\'a7\'b4\'c2 \'ba\'b8\'c5\'eb compile\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d1\'b4\'d9.\
+\
+
+\f1\b \ul ** \'c4\'c4\'c6\'c4\'c0\'cf \'bf\'c9\'bc\'c7
+\f0\b0 \ulnone \
+- \'c1\'a4\'b1\'d4\'bd\'c4\'c0\'bb \'c4\'c4\'c6\'c4\'c0\'cf\'c7\'d2 \'b6\'a7 \'b4\'d9\'c0\'bd \'bf\'c9\'bc\'c7\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+(\'b0\'fd\'c8\'a3 \'be\'c8\'bf\'a1\'b4\'c2 \'be\'e0\'be\'ee!)\
+DOTALL (S) : dot \'b9\'ae\'c0\'da(.)\'b0\'a1 \'c1\'d9\'b9\'d9\'b2\'de \'b9\'ae\'c0\'da\'b8\'a6 \'c6\'f7\'c7\'d4\'c7\'cf\'bf\'a9 \'b8\'f0\'b5\'e7 \'b9\'ae\'c0\'da\'bf\'cd \'b8\'c5\'c4\'a1\'c7\'d1\'b4\'d9.\
+IGNORECASE (I) : \'b4\'eb/\'bc\'d2\'b9\'ae\'c0\'da\'bf\'a1 \'b0\'fc\'b0\'e8 \'be\'f8\'c0\'cc \'b8\'c5\'c4\'a1\'c7\'d1\'b4\'d9.\
+MULTILINE (M) : \'bf\'a9\'b7\'af \'c1\'d9\'b0\'fa \'b8\'c5\'c4\'a1\'c7\'d1\'b4\'d9. (^, $\'b5\'ee\'b0\'fa \'b0\'fc\'b0\'e8)\
+VERBOSE (X) : verbose\'b8\'f0\'b5\'e5\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d1\'b4\'d9. (\'c1\'a4\'b1\'d4\'bd\'c4\'c0\'bb \'ba\'b8\'b1\'e2\'c6\'ed\'c7\'cf\'b0\'d4 \'b8\'b8\'b5\'e9\'b0\'ed \'c1\'d6\'bc\'ae \'b5\'ee\'c0\'bb \'bb\'e7\'bf\'eb\'b0\'a1\'b4\'c9\'c4\'c9 \'c7\'d4)\
+\
+- re.DOTALL = re.S \'c3\'b3\'b7\'b3 \'c8\'b0\'bf\'eb \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+\
+
+\f1\b * DOTALL, S
+\f0\b0 \
+p = re.compile('a.b')\
+m = p.match('a\\nb')\
+print(m)\
+>> None\
+\
+p = re.compile('a.b', re.DOTALL)\
+m = p.match('a\\nb')\
+print(m)\
+>> 
+\f2\fs36 \cf2 \CocoaLigature0 <re.Match object; span=(0, 3), match='a\\nb'>\
+
+\f0\fs40 \cf0 \CocoaLigature1 \
+- \'b1\'e2\'c1\'b8 \\n\'c0\'ba \'b8\'de\'c5\'b8 \'b9\'ae\'c0\'da\'bf\'cd \'b8\'c5\'c4\'a1\'b5\'c7\'c1\'f6 \'be\'ca\'b4\'c2\'b5\'a5, \'b4\'d9\'c0\'bd\'b0\'fa \'b0\'b0\'c0\'ba \'bf\'c9\'bc\'c7\'c0\'bb \'c5\'eb\'c7\'d8 \'b8\'c5\'c4\'a1\'c7\'d8\'c1\'d9 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+
+\f1\b * IGNORECASE, I
+\f0\b0 \
+p = re.compile('[a-z]',re.I)\
+a= p.match('python')\
+b= p.match('Python')\
+c= p.match('PYTHON')\
+print(a)\
+print(b)\
+print(c)\
+>>>\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs36 \cf2 \CocoaLigature0 <re.Match object; span=(0, 1), match='p'>\
+<re.Match object; span=(0, 1), match='P'>\
+<re.Match object; span=(0, 1), match='P'>
+\f0\fs40 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+
+\f1\b * MULTILINE, M
+\f0\b0 \
+- ^, $\'bf\'cd \'bf\'ac\'b0\'fc\'b5\'c8 \'bf\'c9\'bc\'c7\'c0\'cc\'b4\'d9.\
+^ : \'b9\'ae\'c0\'da\'bf\'ad\'c0\'c7 \'c3\'b3\'c0\'bd\'c0\'bb \'c0\'c7\'b9\'cc\
+$ : \'b9\'ae\'c0\'da\'bf\'ad\'c0\'c7 \'b8\'b6\'c1\'f6\'b8\'b7\'c0\'bb \'c0\'c7\'b9\'cc\
+\
+ex\
+^python : \'b9\'ae\'c0\'da\'bf\'ad\'c0\'c7 \'c3\'b3\'c0\'bd\'c0\'cc python\'c0\'b8\'b7\'ce \'bd\'c3\'c0\'db\'c7\'d8\'be\'df \'c7\'d4\
+python$ : \'b9\'ae\'c0\'da\'bf\'ad\'c0\'cc python\'c0\'b8\'b7\'ce \'b3\'a1\'b3\'aa\'be\'df \'c7\'d4\
+\
+p = re.compile("^python\\s\\w+")\
+\
+data = """python one\
+life is too short\
+python two\
+you need python\
+python three"""\
+\
+print(p.findall(data))\
+>>> [\'a1\'aepython one\'a1\'af]\
+- ^python\\s\\w+ : python\'c0\'cc\'b6\'f3\'b4\'c2 \'b9\'ae\'c0\'da\'bf\'ad\'b7\'ce \'bd\'c3\'c0\'db\'c7\'cf\'b0\'ed, \'b5\'da\'bf\'a1 whitespace, \'b1\'d7 \'b5\'da\'bf\'a1 \'b4\'dc\'be\'ee\'b0\'a1 \'bf\'cd\'be\'df \'c7\'d1\'b4\'d9\'b4\'c2 \'c0\'c7\'b9\'cc\
+- ^ \'b8\'de\'c5\'b8 \'b9\'ae\'c0\'da\'bf\'ad \'b9\'ae\'c0\'da\'bf\'ad \'c0\'fc\'c3\'bc\'c0\'c7 \'c3\'b3\'c0\'bd\'c0\'cc \'be\'c6\'b4\'cf\'b6\'f3 \'b0\'a2 \'b6\'f3\'c0\'ce\'c0\'c7 \'c3\'b3\'c0\'bd\'c0\'b8\'b7\'ce \'c0\'ce\'bd\'c4\'bd\'c3\'c5\'b0\'b0\'ed \'bd\'cd\'c0\'ba \'b0\'e6\'bf\'ec \'a1\'a6 MULTILINE, M\'c0\'bb \'bb\'e7\'bf\'eb!\
+\
+p = re.compile("^python\\s\\w+", re.M)\
+\
+data = """python one\
+life is too short\
+python two\
+you need python\
+python three"""\
+\
+print(p.findall(data))\
+>>>[\'a1\'aepython one\'a1\'af, \'a1\'aepython two\'a1\'af, \'a1\'aepython three\'a1\'af]\
+\
+
+\f1\b * VERBOSE, X
+\f0\b0 \
+- \'c1\'a4\'b1\'d4\'bd\'c4 \'c0\'fc\'b9\'ae\'b0\'a1\'b5\'e9\'c0\'cc \'b8\'b8\'b5\'e7 \'c1\'a4\'b1\'d4\'bd\'c4\'c0\'bb \'ba\'b8\'b8\'e9 \'b0\'c5\'c0\'c7 \'be\'cf\'c8\'a3 \'bc\'f6\'c1\'d8\'c0\'cc\'b4\'d9\'a1\'a6\
+- \'c0\'cc\'b7\'b1 \'b0\'e6\'bf\'ec \'be\'ee\'b7\'c1\'bf\'ee \'c1\'a4\'b1\'d4\'bd\'c4\'c0\'bb \'c1\'d6\'bc\'ae \'b6\'c7\'b4\'c2 \'c1\'d9 \'b4\'dc\'c0\'a7\'b7\'ce \'b1\'b8\'ba\'d0\'c7\'d2 \'bc\'f6 \'c0\'d6\'b0\'d4 \'b8\'b8\'b5\'e9 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 charref = re.compile(r'&[#](0[0-7]+|[0-9]+|x[0-9a-fA-F]+);')\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 - \'c0\'cc\'b7\'b1 \'be\'ee\'b7\'c1\'bf\'ee \'bd\'c4\'c0\'bb!\
+\
+charref = re.compile(r"""\
+ &[#]                # Start of a numeric entity reference\
+ (\
+     0[0-7]+         # Octal form\
+   | [0-9]+          # Decimal form\
+   | x[0-9a-fA-F]+   # Hexadecimal form\
+ )\
+ ;                   # Trailing semicolon\
+""", re.VERBOSE)\
+- \'c0\'cc\'b7\'b1\'bd\'c4\'c0\'b8\'b7\'ce \'bb\'e7\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+- charref\'b4\'c2 \'c0\'a7\'b3\'aa \'be\'c6\'b7\'a1\'b3\'aa \'b0\'b0\'c0\'ba \'bf\'aa\'c7\'d2\'c0\'bb \'c7\'d1\'b4\'d9.\
+- VERBOSE\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9 \'b9\'ae\'c0\'da\'bf\'ad\'bf\'a1 \'bb\'e7\'bf\'eb\'b5\'c8 whitespace\'b4\'c2 \'c4\'c4\'c6\'c4\'c0\'cf\'c7\'d2 \'b6\'a7 \'c1\'a6\'b0\'c5\'b5\'c8\'b4\'d9. ([]\'be\'c8\'bf\'a1 \'bb\'e7\'bf\'eb\'c7\'d1 whitespace \'c1\'a6\'bf\'dc)\
+- \'c1\'d9 \'b4\'dc\'c0\'a7\'b7\'ce #\'b1\'e2\'c8\'a3\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'bf\'a9 \'c1\'d6\'bc\'ae\'b9\'ae\'c0\'bb \'c0\'db\'bc\'ba\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+
+\f1\b \ul ** \'b9\'e9\'bd\'bd\'b7\'a1\'bd\'c3 \'b9\'ae\'c1\'a6
+\f0\b0 \ulnone \
+- \'b8\'b8\'be\'e0, \'be\'ee\'b6\'b2 \'c6\'c4\'c0\'cf \'be\'c8\'bf\'a1 \'c0\'d6\'b4\'c2 \'a1\'b0\\section\'a1\'b1 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'bb \'c3\'a3\'b1\'e2 \'c0\'a7\'c7\'d1 \'c1\'a4\'b1\'d4\'bd\'c4\'c0\'bb \'b8\'b8\'b5\'e7\'b4\'d9\'b0\'ed \'b0\'a1\'c1\'a4\'c7\'d2 \'b6\'a7\
+\\section\
+\'c0\'ba \\s\'b0\'a1 whitespace\'b7\'ce \'c7\'d8\'bc\'ae\'b5\'c7\'be\'ee,\
+[ \\t\\n\\r\\f\\v]ection\'c0\'b8\'b7\'ce \'c7\'d8\'bc\'ae\'b5\'c8\'b4\'d9\'a1\'a6\
+\
+- \'b5\'fb\'b6\'f3\'bc\'ad, \\\\section\'c0\'b8\'b7\'ce \'c7\'a5\'c7\'f6\'c7\'d8\'be\'df\'c7\'d1\'b4\'d9. (\'c0\'cc\'bd\'ba\'c4\'c9\'c0\'cc\'c7\'c1 \'c3\'b3\'b8\'ae \'c7\'ca\'bf\'e4)\
+p = re.compile(\'a1\'ae\\\\section\'a1\'af)\
+\
+- \'c7\'cf\'c1\'f6\'b8\'b8 \'c0\'cc\'b0\'e6\'bf\'ec\'bf\'a1\'b5\'b5, \'c6\'c4\'c0\'cc\'bd\'e3 \'c1\'a4\'b1\'d4\'bd\'c4 \'bf\'a3\'c1\'f8\'bf\'a1\'b4\'c2 \'c6\'c4\'c0\'cc\'bd\'e3 \'b9\'ae\'c0\'da\'bf\'ad \'b8\'ae\'c5\'cd\'b7\'b2 \'b1\'d4\'c4\'a2\'bf\'a1 \'b5\'fb\'b6\'f3 \\\\\'c0\'cc \\\'b7\'ce \'ba\'af\'b0\'e6\'b5\'c7\'be\'ee \\section\'c0\'cc \'c0\'fc\'b4\'de\'b5\'c8\'b4\'d9.\
+- \'b0\'e1\'b1\'b9 \'c1\'a4\'b1\'d4\'bd\'c4 \'bf\'a3\'c1\'f8\'bf\'a1 \\\\\'b9\'ae\'c0\'da\'b8\'a6 \'c0\'fc\'b4\'de\'c7\'cf\'b7\'c1\'b8\'e9 \\\\\\\\\'b7\'ce 4\'b0\'b3\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d1\'b4\'d9.\
+p = re.compile(\'a1\'ae\\\\\\\\section\'a1\'af)\
+\
+- \'c0\'cc\'b7\'af\'c7\'d1 \'b9\'ae\'c1\'a6\'b8\'a6 \'c7\'d8\'b0\'e1\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d8 \'c6\'c4\'c0\'cc\'bd\'e3 \'c1\'a4\'b1\'d4\'bd\'c4\'bf\'a1\'b4\'c2 Raw String \'b1\'d4\'c4\'a2\'c0\'cc \'bb\'fd\'b0\'e5\'b4\'d9\'a1\'a6!\
+p = re.compile(r\'a1\'af\\\\section\'a1\'af)\
+- \\ 2\'b0\'b3 \'b4\'eb\'bd\'c5 1\'b0\'b3\'b8\'b8 \'bd\'e1\'b5\'b5 2\'b0\'b3\'b8\'a6 \'be\'b4 \'b0\'cd\'b0\'fa \'b5\'bf\'c0\'cf\'c7\'d1 \'c0\'c7\'b9\'cc\'b8\'a6 \'b0\'ae\'b0\'d4 \'b5\'c8\'b4\'d9.\
+\
+\
+\
+\
+\
+}

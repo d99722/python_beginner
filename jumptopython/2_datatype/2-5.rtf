@@ -1,0 +1,115 @@
+{\rtf1\ansi\ansicpg949\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Regular;\f1\fnil\fcharset129 AppleSDGothicNeo-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11000\viewh19580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs44 \cf0 ch2-5. \'b5\'f1\'bc\'c5\'b3\'ca\'b8\'ae \'c0\'da\'b7\'e1\'c7\'fc\
+\
+- \'bb\'e7\'b6\'f7\'c0\'ba \'b4\'a9\'b1\'b8\'b5\'e7\'c1\'f6 \'a1\'b0\'c0\'cc\'b8\'a7\'a1\'b1 = \'a1\'b0\'c8\'ab\'b1\'e6\'b5\'bf\'a1\'b1, \'a1\'b0\'bb\'fd\'c0\'cf\'a1\'b1 = \'a1\'b02\'bf\'f9 2\'c0\'cf\'a1\'b1 \'b5\'ee\'c0\'b8\'b7\'ce \'b1\'b8\'ba\'d0 \'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9. \'c6\'c4\'c0\'cc\'bd\'e3 \'b6\'c7\'c7\'d1 \'c0\'cc\'b7\'af\'c7\'e5 \'b4\'eb\'c0\'c0 \'b0\'fc\'b0\'e8\'b8\'a6 \'b3\'aa\'c5\'b8\'b3\'be \'bc\'f6 \'c0\'d6\'b4\'c2 \'c0\'da\'b7\'e1\'c7\'fc\'c0\'bb \'b0\'a1\'c1\'f6\'b0\'ed \'c0\'d6\'b4\'d9.\
+- \'c0\'cc\'b8\'a6 \'bf\'ac\'b0\'fc \'b9\'e8\'bf\'ad associative array / \'c7\'d8\'bd\'c3 hash \'b6\'f3\'b0\'ed \'c7\'cf\'b8\'e7, \'c6\'c4\'c0\'cc\'bd\'e3\'bf\'a1\'bc\'ad\'b4\'c2 \'b5\'f1\'bc\'c5\'b3\'ca\'b8\'ae dictionary \'b6\'f3\'b0\'ed \'c7\'d1\'b4\'d9.\
+- key \'bf\'cd value\'b8\'a6 \'c7\'d1 \'bd\'d6\'c0\'b8\'b7\'ce \'b0\'ae\'b4\'c2\'b4\'d9.\
+- \'bc\'f8\'c2\'f7\'c0\'fb\'c0\'b8\'b7\'ce \'b0\'aa\'c0\'bb \'b1\'b8\'c7\'cf\'c1\'f6 \'be\'ca\'b0\'ed, key\'b8\'a6 \'c5\'eb\'c7\'d8 value\'b8\'a6 \'be\'f2\'b4\'c2\'b4\'d9.\
+\
+
+\f1\b \ul * \'b5\'f1\'bc\'c5\'b3\'ca\'b8\'ae\'b4\'c2 \'be\'ee\'b6\'bb\'b0\'d4 \'b8\'b8\'b5\'e9\'b1\'ee?
+\f0\b0 \ulnone \
+- \{key1:value1, key2:value2, key3:value3, \'a1\'a6 \}\
+dic = \{\'a1\'aename\'a1\'af:\'a1\'afpey\'a1\'af, \'a1\'aephone\'a1\'af:\'a1\'af0119993323\'a1\'af, \'a1\'aebirth\'a1\'af:\'a1\'af1118\'a1\'af\}\
+a = \{1:\'a1\'afhi\'a1\'af\}\
+a = \{\'a1\'aea\'a1\'af:[1,2,3]\}\
+- \'b4\'d9\'be\'e7\'c7\'d1 \'c7\'fc\'c5\'c2\'b0\'a1 \'c1\'f6\'bf\'f8\'b5\'c8\'b4\'d9.\
+\
+
+\f1\b \ul * \'b5\'f1\'bc\'c5\'b3\'ca\'b8\'ae \'bd\'d6 \'c3\'df\'b0\'a1, \'bb\'e8\'c1\'a6\'c7\'cf\'b1\'e2\
+
+\f0\b0 \ulnone - \'be\'d5\'bc\'ad \'b8\'bb\'c7\'df\'b5\'ed, \'bc\'f8\'bc\'ad\'b4\'c2 \'c1\'df\'bf\'e4\'c7\'cf\'c1\'f6 \'be\'ca\'b0\'ed, \'b9\'ab\'be\'f9\'c0\'cc \'c3\'df\'b0\'a1\'b5\'c7\'be\'fa\'b4\'c2\'b0\'a1\'b0\'a1 \'c1\'df\'bf\'e4\'c7\'cf\'b4\'d9\
+a = \{1:\'a1\'afa\'a1\'af\}\
+a[2] = \'a1\'aeb\'a1\'af : \{2:\'a1\'afb\'a1\'af\}\'bd\'d6 \'c3\'df\'b0\'a1!\
+a : \{2:\'a1\'afb\'a1\'af, 1:\'a1\'afa\'a1\'af\}\
+\
+a[\'a1\'aename\'a1\'af]=\'a1\'aepey\'a1\'af\
+a : \{\'a1\'aename\'a1\'af:\'a1\'afpey\'a1\'af, 2:\'a1\'afb\'a1\'af, 1:\'a1\'afa\'a1\'af\}\
+\
+a[3]=[1,2,3]\
+a : \{\'a1\'aename':'pey',3:[1,2,3],2:'b',1:'a'\}\
+\
+
+\f1\b #\'b5\'f1\'bc\'c5\'b3\'ca\'b8\'ae \'bf\'e4\'bc\'d2 \'bb\'e8\'c1\'a6\'c7\'cf\'b1\'e2\
+
+\f0\b0 del a[1] : key\'b0\'a1 1\'c0\'ce key:value \'bd\'d6 \'bb\'e8\'c1\'a6\
+a : \{\'a1\'aename':'pey\'a1\'af,3:[1,2,3],2:\'a1\'afb\'a1\'af\}\
+\
+
+\f1\b \ul * \'b5\'f1\'bc\'c5\'b3\'ca\'b8\'ae \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'b9\'e6\'b9\'fd\
+
+\f0\b0 \ulnone ex : 4\'b8\'ed\'c0\'c7 \'bb\'e7\'b6\'f7\'b0\'fa \'b0\'a2\'c0\'da\'c0\'c7 \'c6\'af\'b1\'e2\'b8\'a6 \'c7\'a5\'c7\'f6\'a1\'a6\
+\{\'a1\'b0\'b1\'e8\'bf\'ac\'be\'c6\'a1\'b1:\'a1\'b1\'c7\'c7\'b0\'dc\'a1\'b1,\'a1\'b1\'b7\'f9\'c7\'f6\'c1\'f8\'a1\'b1:\'a1\'b1\'be\'df\'b1\'b8\'a1\'b1, \'a1\'a6 \}\
+\
+
+\f1\b #\'b5\'f1\'bc\'c5\'b3\'ca\'b8\'ae\'bf\'a1\'bc\'ad key \'bb\'e7\'bf\'eb\'c7\'d8 value \'be\'f2\'b1\'e2\
+
+\f0\b0 grade = \{\'a1\'aepey\'a1\'af:10, \'a1\'aejulliet\'a1\'af:99\}\
+grade[\'a1\'aepey\'a1\'af] : key\'b0\'a1 pey\'c0\'ce \'b5\'f1\'bc\'c5\'b3\'ca\'b8\'ae\'c0\'c7 value : 10\
+grade[\'a1\'aejulliet\'a1\'af] : key\'b0\'a1 \'c1\'d9\'b8\'ae\'bf\'a7\'c0\'ce \'b5\'f1\'bc\'c5\'b3\'ca\'b8\'ae\'c0\'c7 value : 99\
+- \'c1\'ef, a[Key]\'b8\'a6 \'c5\'eb\'c7\'d8 Key\'bf\'a1 \'c7\'d8\'b4\'e7\'c7\'cf\'b4\'c2 value\'b8\'a6 \'be\'f2\'b4\'c2\'b4\'d9.\
+	: \'b8\'ae\'bd\'ba\'c6\'ae, \'c6\'a9\'c7\'c3\'c0\'c7 \'c0\'ce\'b5\'a6\'bd\'cc\'c0\'bb \'c0\'fb\'bf\'eb\'c7\'d2 \'bc\'f6 \'be\'f8\'b4\'d9!!\
+\
+
+\f1\b #\'c1\'d6\'c0\'c7\'bb\'e7\'c7\'d7\
+
+\f0\b0 - \'c1\'df\'ba\'b9\'b5\'c7\'b4\'c2 key\'b0\'aa\'c0\'bb \'b0\'a1\'c1\'f6\'b8\'e9 \'c7\'cf\'b3\'aa\'b8\'a6 \'c1\'a6\'bf\'dc\'c7\'d1 \'b3\'aa\'b8\'d3\'c1\'f6\'b4\'c2 \'b9\'ab\'bd\'c3\'b4\'e7\'c7\'d1\'b4\'d9.\
+	: \'be\'ee\'b6\'b2\'b0\'cd\'c0\'cc \'b9\'ab\'bd\'c3\'b4\'e7\'c7\'d2 \'c1\'f6\'b4\'c2 \'bf\'b9\'c3\'f8\'c7\'d2 \'bc\'f6 \'be\'f8\'b4\'d9.\
+- key\'bf\'a1\'b4\'c2 \'b8\'ae\'bd\'ba\'c6\'ae\'b0\'a1 \'b5\'e9\'be\'ee\'b0\'a5 \'bc\'f6 \'be\'f8\'b4\'d9. \'b4\'d9\'b8\'b8 \'c6\'a9\'c7\'c3\'c0\'ba \'b5\'e9\'be\'ee\'b0\'a5 \'bc\'f6 \'c0\'d6\'b4\'d9. (\'ba\'af\'c8\'ad \'b0\'a1\'b4\'c9 \'bf\'a9\'ba\'ce\'bf\'a1 \'b5\'fb\'b8\'a7\'a1\'a6)\
+\
+
+\f1\b \ul * \'b5\'f1\'bc\'c5\'b3\'ca\'b8\'ae \'b0\'fc\'b7\'c3 \'c7\'d4\'bc\'f6\'b5\'e9\
+
+\f0\b0 \ulnone \
+
+\f1\b # key \'b8\'ae\'bd\'ba\'c6\'ae \'b8\'b8\'b5\'e9\'b1\'e2 keys\
+
+\f0\b0 a = \{\'a1\'aename\'a1\'af:\'a1\'afpey\'a1\'af, \'a1\'aephone\'a1\'af:\'a1\'af01020549719\'a1\'af, \'a1\'aebirth\'a1\'af:\'a1\'af1118\'a1\'af\}\
+a.keys() : dict_keys([\'a1\'aename\'a1\'af,\'a1\'afphone\'a1\'af,\'a1\'afbirth\'a1\'af])\
+- a\'c0\'c7 key\'b8\'b8\'c0\'bb \'b8\'f0\'be\'c6\'bc\'ad dict_keys\'b6\'f3\'b4\'c2 \'b0\'b4\'c3\'bc\'b8\'a6 \'b8\'ae\'c5\'cf\'c7\'d1\'b4\'d9.\
+-dict_keys\'b0\'b4\'c3\'bc\'b4\'c2 \'b8\'ae\'bd\'ba\'c6\'ae\'c3\'b3\'b7\'b3 \'c8\'b0\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+	: append, insert, pop, remove, sort\'b5\'ee\'c0\'c7 \'c7\'d4\'bc\'f6\'b4\'c2 \'bd\'c3\'c7\'e0 \'ba\'d2\'b0\'a1\
+for k in a.keys():\
+	print(k)\
+phone\
+birth\
+name\
+- \'b0\'b4\'c3\'bc\'b8\'a6 \'b8\'ae\'bd\'ba\'c6\'ae\'b7\'ce \'ba\'af\'c8\'af\'c7\'cf\'b1\'e2\'a1\'a6 list(a.keys())\
+\
+
+\f1\b #value \'b8\'ae\'bd\'ba\'c6\'ae \'b8\'b8\'b5\'e9\'b1\'e2 values\
+
+\f0\b0 a.values() : dict_values([\'a1\'aepey\'a1\'af,\'a1\'af01020549719\'a1\'af,\'a1\'af1118\'a1\'af])\
+\
+
+\f1\b # Key, Value \'bd\'d6 \'be\'f2\'b1\'e2 items\
+
+\f0\b0 a.items() : dict_items([(\'a1\'aename\'a1\'af,\'a1\'afpey\'a1\'af),\'a1\'a6])\
+\
+
+\f1\b # Key:Value \'bd\'d6 \'b8\'f0\'b5\'ce \'c1\'f6\'bf\'ec\'b1\'e2 clear\
+
+\f0\b0 a.clear()\
+a : \{\}\
+\
+
+\f1\b # Key\'b7\'ce Value \'be\'f2\'b1\'e2 get\
+
+\f0\b0 a.get(\'a1\'aename\'a1\'af) : \'a1\'aepey\'a1\'af\
+a.get(\'a1\'aephone\'a1\'af) : \'a1\'ae01020540710\'a1\'af\
+- \'be\'d5\'bf\'a1\'bc\'ad \'ba\'b8\'be\'d2\'b5\'ed\'c0\'cc a[key]\'bf\'cd \'b5\'bf\'c0\'cf\'c7\'cf\'b4\'d9 (a[key]=a.get(key))\
+- \'b4\'d9\'b8\'b8 get\'c0\'bb \'bb\'e7\'bf\'eb\'bd\'c3 \'be\'f8\'b4\'c2 \'b0\'aa\'c0\'bb \'c3\'a3\'c0\'b8\'b8\'e9 none\'c0\'bb \'b8\'ae\'c5\'cf\'c7\'d1\'b4\'d9.\
+- a.get(\'a1\'aefoo\'a1\'af,\'a1\'afbar\'a1\'af) : \'be\'f8\'c0\'bb \'bd\'c3\'c0\'c7 \'b5\'f0\'c6\'fa\'c6\'ae\'b0\'aa \'a1\'aebar\'a1\'af\'b8\'a6 \'bc\'b3\'c1\'a4, \'be\'f8\'c0\'bb \'bd\'c3 \'a1\'aebar\'a1\'af\'b8\'a6 \'b8\'ae\'c5\'cf\
+\
+
+\f1\b #\'c7\'d8\'b4\'e7 key\'b0\'a1 \'b5\'f1\'bc\'c5\'b3\'ca\'b8\'ae \'be\'c8\'bf\'a1 \'c0\'d6\'b4\'c2\'c1\'f6 \'c1\'b6\'bb\'e7\'c7\'cf\'b1\'e2 in\
+
+\f0\b0 \'a1\'aename\'a1\'af in a : True\
+\'a1\'aeemail\'a1\'af in a : False\
+}

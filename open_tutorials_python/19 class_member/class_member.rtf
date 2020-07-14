@@ -1,0 +1,31 @@
+{\rtf1\ansi\ansicpg949\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10980\viewh19580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0 ch19. member (in class)\
+\
+* member\
+- instance\'c0\'c7 \'c7\'d9\'bd\'c9 : \'b3\'bb\'ba\'ce\'c0\'fb\'c0\'b8\'b7\'ce \'be\'ee\'b6\'b0\'c7\'d1 \'c1\'a4\'ba\'b8\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'c0\'d6\'b4\'d9.\
+- today : \'c6\'af\'c1\'a4\'c7\'d1 instance\'bf\'a1 \'c1\'be\'bc\'d3\'b5\'c7\'b4\'c2 \'b0\'cd\'c0\'cc \'be\'c6\'b4\'d4\'a1\'a6 class\'bf\'a1 \'bc\'d2\'bc\'d3\'b5\'c8\'b4\'d9. ~ class method\'b6\'f3\'b0\'ed \'c7\'d4\
+\
+* class method \'c1\'f7\'c1\'a2 \'b8\'b8\'b5\'e9\'b1\'e2\
+- \'c6\'c4\'c0\'cc\'bd\'e3\'c0\'ba \'c5\'ac\'b7\'a1\'bd\'ba \'bc\'d2\'bc\'d3\'c0\'cc \'b5\'ce\'b0\'b3\'b0\'a1 \'c0\'d6\'c0\'bd\
+(static_method, class_method)\
+(\'c1\'a4\'c0\'c7\'c7\'d2 \'b6\'a7, @staticmethod / @classmethod - def~(cls) \'b8\'a6 \'ba\'d9\'bf\'a9\'c1\'dc)\
+- \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'be\'c8, method\'c0\'c7 \'b9\'db\'bf\'a1\'bc\'ad \'ba\'af\'bc\'f6\'b8\'a6 \'bc\'b1\'be\'f0 \'c7\'cf\'b8\'e9 class \'bc\'d2\'bc\'d3\'c0\'cc \'b5\'ca - \'c1\'a2\'b1\'d9\'c7\'cf\'b7\'c1\'b8\'e9 \'c5\'ac\'b7\'a1\'bd\'ba \'c0\'cc\'b8\'a7. \'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d8 \'c1\'a2\'b1\'d9\'c7\'d8\'be\'df\'c7\'d4\
+- \'a1\'b0add : %d+%d=%d\'a1\'b1 % (int\'b0\'aa, int\'b0\'aa, int\'b0\'aa)\
+\
+ruby\
+- \'b1\'e2\'c1\'b8 (\'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba \'bc\'d2\'bc\'d3)\
+: i = cs.new()\
+: i.instance_method()\
+- \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'c5\'bd\'e1\'b5\'e5 (\'c5\'ac\'b7\'a1\'bd\'ba \'bc\'d2\'bc\'d3)\
+: i = cs.new()\
+: cs.class_method()\
+(\'c1\'a4\'c0\'c7\'c7\'d2 \'b6\'a7, def Cs.class_method()\'b7\'ce \'c7\'d8\'c1\'d6\'be\'ee\'be\'df\'c7\'d4)\
+- \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1 \'bc\'d3\'c7\'cf\'b4\'c2 \'ba\'af\'bc\'f6\'b4\'c2 @@\'b7\'ce \'c7\'d8\'c1\'dc\
+(cf : \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba : @)\
+- \'a1\'b0 \'a1\'b0 \'be\'c8\'bf\'a1 #\{result\}\'b7\'ce \'b9\'ae\'c0\'da\'bf\'ad\'b7\'ce \'c7\'a5\'c7\'f6 \'b0\'a1\'b4\'c9}

@@ -1,0 +1,171 @@
+{\rtf1\ansi\ansicpg949\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Regular;\f1\fnil\fcharset129 AppleSDGothicNeo-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11000\viewh19580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs44 \cf0 ch2-3. \'b8\'ae\'bd\'ba\'c6\'ae \'c0\'da\'b7\'e1\'c7\'fc\
+\
+
+\f1\b \ul * \'b8\'ae\'bd\'ba\'c6\'ae\'b4\'c2 \'be\'ee\'b6\'bb\'b0\'d4 \'b8\'b8\'b5\'e9\'b0\'ed \'bb\'e7\'bf\'eb\'c7\'d2\'b1\'ee?\
+
+\f0\b0 \ulnone - odd = [1, 3, 5, 7, 9]\
+- \'b8\'ae\'bd\'ba\'c6\'ae\'b8\'ed = [\'bf\'e4\'bc\'d21, \'bf\'e4\'bc\'d22, \'bf\'e4\'bc\'d23, \'a1\'a6 ]\
+- \'b8\'ae\'bd\'ba\'c6\'ae\'c0\'c7 \'bf\'e4\'bc\'d2\'b7\'ce \'b5\'e9\'be\'ee \'bf\'c3 \'bc\'f6 \'c0\'d6\'b4\'c2 \'b0\'cd\
+	: \'ba\'f3\'b0\'aa, int, string, list\'c0\'da\'c3\'bc\
+\
+
+\f1\b \ul * \'b8\'ae\'bd\'ba\'c6\'ae\'c0\'c7 \'c0\'ce\'b5\'a6\'bd\'cc\
+
+\f0\b0 \ulnone a = [1, 2, 3]\
+- a[0] : \'b8\'ae\'bd\'ba\'c6\'ae\'c0\'c7 \'c3\'b9 \'b9\'f8\'c2\'b0 \'bf\'e4\'bc\'d2\'b0\'aa : 1\
+- a[0] + a[2] : \'bf\'e4\'bc\'d21 + \'bf\'e4\'bc\'d23 : 4\
+- a[-1] : a\'c0\'c7 \'b8\'b6\'c1\'f6\'b8\'b7 \'bf\'e4\'bc\'d2\'b0\'aa : 3\
+\
+a = [1, 2, 3, [\'a1\'aea\'a1\'af, \'a1\'aeb\'a1\'af, \'a1\'aec\'a1\'af]]\
+- a[0] : 1\
+- a[-1] = a[3] : [\'a1\'aea\'a1\'af, \'a1\'aeb\'a1\'af, \'a1\'aec\'a1\'af]\
+- a[-1][0] = \'a1\'aea\'a1\'af (\'c0\'cc\'c1\'df\'b8\'ae\'bd\'ba\'c6\'ae \'c0\'ce\'b5\'a6\'bd\'cc)\
+- \'b0\'b0\'c0\'ba \'b9\'e6\'bd\'c4\'c0\'b8\'b7\'ce \'bb\'ef\'c1\'df\'b8\'ae\'bd\'ba\'c6\'ae\'b5\'b5 \'c0\'ce\'b5\'a6\'bd\'cc \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+\
+
+\f1\b \ul * \'b8\'ae\'bd\'ba\'c6\'ae\'c0\'c7 \'bd\'bd\'b6\'f3\'c0\'cc\'bd\'cc\
+
+\f0\b0 \ulnone a = [1, 2, 3, 4, 5]\
+a[0:2] : [1, 2]\
+	: \'b9\'ae\'c0\'da\'bf\'ad \'bd\'bd\'b6\'f3\'c0\'cc\'bd\'cc\'b0\'fa \'bf\'cf\'c0\'fc\'c8\'f7 \'b5\'bf\'c0\'cf\'c7\'cf\'b0\'d4 \'bb\'e7\'bf\'eb\'b5\'c8\'b4\'d9.\
+a[:2] : [1, 2]\
+a[2:] : [3, 4, 5]\
+- \'c1\'df\'c3\'b8\'b5\'c8 \'b8\'ae\'bd\'ba\'c6\'ae\'bf\'aa\'bd\'c3 \'b8\'b6\'c2\'f9\'b0\'a1\'c1\'f6\'b7\'ce \'b5\'bf\'c0\'db\'c7\'d1\'b4\'d9.\
+\
+
+\f1\b \ul * \'b8\'ae\'bd\'ba\'c6\'ae \'bf\'ac\'bb\'ea\'c0\'da\
+
+\f0\b0 \ulnone a = [1,2,3]\
+b = [4,5,6]\
+a+b = [1,2,3,4,5,6]\
+a*3 = [1,2,3,1,2,3,1,2,3]\
+- \'b8\'b6\'c2\'f9\'b0\'a1\'c1\'f6\'b7\'ce \'b9\'ae\'c0\'da\'bf\'ad\'c0\'c7 \'bf\'ac\'bb\'ea\'c0\'da\'bf\'cd \'b0\'b0\'c0\'ba \'b9\'e6\'bd\'c4\'c0\'cc\'b4\'d9.\
+\
+
+\f1\b \ul * \'b8\'ae\'bd\'ba\'c6\'ae\'c0\'c7 \'bc\'f6\'c1\'a4, \'ba\'af\'b0\'e6\'b0\'fa \'bb\'e8\'c1\'a6\
+
+\f0\b0 \ulnone \
+
+\f1\b # \'bc\'f6\'c1\'a4\'c7\'cf\'b1\'e2\
+
+\f0\b0 a=[1,2,3]\
+a[2] = 4\
+a=[1,2,4]\
+\
+
+\f1\b # \'bf\'ac\'bc\'d3\'b5\'c8 \'b9\'fc\'c0\'a7\'c0\'c7 \'b0\'aa \'bc\'f6\'c1\'a4\'c7\'cf\'b1\'e2\
+
+\f0\b0 a[1:2] : [2]\
+a[1:2] = [\'a1\'aea\'a1\'af,\'a1\'afb\'a1\'af,\'a1\'afc\'a1\'af]\
+a = [1,\'a1\'afa\'a1\'af,\'a1\'afb\'a1\'af,\'a1\'afc\'a1\'af,4]\
+cf, a[1] = [\'a1\'aea\'a1\'af,\'a1\'afb\'a1\'af,\'a1\'afc\'a1\'af]\'b7\'ce \'bc\'f6\'c1\'a4\'bd\'c3\
+	: a = [1,[\'a1\'aea\'a1\'af,\'a1\'afb\'a1\'af,\'a1\'afc\'a1\'af],4]\'b0\'a1 \'b5\'c8\'b4\'d9. : \'b9\'fc\'c0\'a7 \'bc\'f6\'c1\'a4\'b0\'fa \'c0\'da\'b8\'ae \'bc\'f6\'c1\'a4\'c0\'c7 \'c2\'f7\'c0\'cc\
+\
+
+\f1\b # [] \'bb\'e7\'bf\'eb\'c7\'d8 \'b8\'ae\'bd\'ba\'c6\'ae \'bf\'e4\'bc\'d2 \'bb\'e8\'c1\'a6\'c7\'cf\'b1\'e2\
+
+\f0\b0 a[1:3] = []\
+a = [1,\'a1\'afc\'a1\'af,4]\
+\
+
+\f1\b # del \'c7\'d4\'bc\'f6 \'bb\'e7\'bf\'eb\'c7\'d8 \'b8\'ae\'bd\'ba\'c6\'ae \'bf\'e4\'bc\'d2 \'bb\'e8\'c1\'a6\'c7\'cf\'b1\'e2\
+
+\f0\b0 a = [1, \'a1\'aec\'a1\'af, 4]\
+del a[1]\
+a = [1, 4]\
+- del\'c7\'d4\'bc\'f6\'b4\'c2 \'c6\'c4\'c0\'cc\'bd\'e3\'c0\'cc \'c0\'da\'c3\'bc\'c0\'fb\'c0\'b8\'b7\'ce \'b0\'a1\'c1\'f6\'b0\'ed \'c0\'d6\'b4\'c2 \'bb\'e8\'c1\'a6 \'c7\'d4\'bc\'f6\'c0\'cc\'b4\'d9.\
+\
+
+\f1\b \ul * \'b8\'ae\'bd\'ba\'c6\'ae \'b0\'fc\'b7\'c3 \'c7\'d4\'bc\'f6\'b5\'e9\
+
+\f0\b0 \ulnone - \'ba\'af\'bc\'f6\'b8\'ed \'b5\'da\'bf\'a1 . \'c0\'bb \'ba\'d9\'bf\'a9\'bc\'ad \'c7\'d4\'bc\'f6\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+
+\f1\b # \'b8\'ae\'bd\'ba\'c6\'ae\'bf\'a1 \'bf\'e4\'bc\'d2 \'c3\'df\'b0\'a1 append\
+
+\f0\b0 a = [1, 2, 3]\
+a.append(4)\
+a = [1, 2, 3, 4]\
+\
+a.append([5,6])\
+a = [1, 2, 3, 4, [5, 6])\
+\
+
+\f1\b # \'b8\'ae\'bd\'ba\'c6\'ae \'c1\'a4\'b7\'c4 sort\
+
+\f0\b0 a = [1, 4, 3, 2]\
+a.sort()\
+a = [1, 2, 3, 4]\
+- \'be\'cb\'c6\'c4\'ba\'aa \'bc\'f8\'bc\'ad\'b7\'ce \'c1\'a4\'b7\'c4\'b5\'b5 \'b0\'a1\'b4\'c9\'c7\'d4! (\'a1\'aea\'a1\'af, \'a1\'aec\'a1\'af, \'a1\'aeb\'a1\'af)\
+\
+
+\f1\b # \'b8\'ae\'b9\'f6\'bd\'ba \'b5\'da\'c1\'fd\'b1\'e2 reverse\
+
+\f0\b0 a = [\'a1\'aea\'a1\'af, \'a1\'aec\'a1\'af, \'a1\'aeb\'a1\'af]\
+a.reverse()\
+a = [\'a1\'aeb\'a1\'af, \'a1\'aec\'a1\'af, \'a1\'aea\'a1\'af]\
+\
+
+\f1\b # \'c0\'a7\'c4\'a1 \'b9\'dd\'c8\'af index\
+
+\f0\b0 a = [1,2,3]\
+a.index(3) : 2\
+a.index(1) : 0\
+a.index(0) : error\
+\
+
+\f1\b # \'b8\'ae\'bd\'ba\'c6\'ae\'bf\'a1 \'bf\'e4\'bc\'d2 \'bb\'f0\'c0\'d4 insert\
+
+\f0\b0 a = [1, 2, 3]\
+a.insert(0, 4) : 0\'c0\'a7\'c4\'a1\'bf\'a1 4\'bb\'f0\'c0\'d4\
+a : [4, 1, 2, 3]\
+a.insert(3, 5)\
+a : [4, 1, 2, 5, 3]\
+\
+
+\f1\b # \'b8\'ae\'bd\'ba\'c6\'ae \'bf\'e4\'bc\'d2 \'c1\'a6\'b0\'c5 remove\
+
+\f0\b0 a = [1, 2, 3, 1, 2, 3]\
+a.remove(3) : \'c3\'b3\'c0\'bd\'c0\'b8\'b7\'ce \'b3\'aa\'bf\'c0\'b4\'c2 3\'c0\'bb \'c1\'a6\'b0\'c5\
+a : [1, 2, 1, 2, 3]\
+\
+
+\f1\b #\'b8\'ae\'bd\'ba\'c6\'ae \'bf\'e4\'bc\'d2 \'b2\'f4\'c1\'fd\'be\'ee\'b3\'bb\'b1\'e2 pop\
+
+\f0\b0 - \'b8\'c7 \'b8\'b6\'c1\'f6\'b8\'b7 \'bf\'e4\'bc\'d2\'b8\'a6 \'b5\'b9\'b7\'c1\'c1\'d6\'b0\'ed \'b1\'d7 \'bf\'e4\'bc\'d2\'b4\'c2 \'bb\'e8\'c1\'a6\'c7\'d4\
+a = [1, 2, 3]\
+a.pop() : 3\
+a : [1, 2]\
+\
+a = [1,2,3]\
+a.pop(1) : 2 : \'c0\'a7\'c4\'a1 \'c1\'f6\'c1\'a4\'bd\'c3, \'b1\'d7 \'c0\'a7\'c4\'a1\'b8\'b8 \'b2\'f4\'c1\'fd\'be\'ee\'b3\'bb\'b0\'ed \'bb\'e8\'c1\'a6\
+a : [1, 3] \
+\
+
+\f1\b # \'b8\'ae\'bd\'ba\'c6\'ae\'bf\'a1 \'c6\'f7\'c7\'d4\'b5\'c8 \'bf\'e4\'bc\'d2 x\'c0\'c7 \'b0\'b3\'bc\'f6 \'bc\'bc\'b1\'e2 count\
+
+\f0\b0 a = [1,2,3,1]\
+a.count(1) : 2\
+- 1\'c0\'c7 \'b0\'b9\'bc\'f6\'b8\'a6 \'c3\'a3\'be\'c6\'c1\'dc\
+\
+
+\f1\b # \'b8\'ae\'bd\'ba\'c6\'ae \'c8\'ae\'c0\'e5 extend\
+
+\f0\b0 - extend(x)\'bf\'a1\'bc\'ad x\'c0\'da\'b8\'ae\'bf\'a1\'b4\'c2 \'b8\'ae\'bd\'ba\'c6\'ae\'b8\'b8\'c0\'cc \'bf\'c3 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+a = [1,2,3]\
+a.extend([4,5]) : [1,2,3,4,5]\
+b = [6,7]\
+a.extend(b) : [1,2,3,4,5,6,7]\
+- a.extend([4,5]) / a+=[4,5] / a=a+[4,5]\
+	: 3\'b0\'b3\'b4\'c2 \'b5\'bf\'c0\'cf\'c7\'d1 \'bd\'c4\'c0\'cc\'b4\'d9.\
+\
+\
+\
+}

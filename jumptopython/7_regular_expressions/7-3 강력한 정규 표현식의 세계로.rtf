@@ -1,0 +1,335 @@
+{\rtf1\ansi\ansicpg949\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Bold;\f1\fnil\fcharset129 AppleSDGothicNeo-Regular;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11000\viewh19580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs40 \cf0 \ul \ulc0 ch7-3. \'b0\'ad\'b7\'c2\'c7\'d1 \'c1\'a4\'b1\'d4 \'c7\'a5\'c7\'f6\'bd\'c4\'c0\'c7 \'bc\'bc\'b0\'e8\'b7\'ce
+\f1\b0 \ulnone \
+- 7-2\'bf\'a1\'bc\'ad \'b9\'e8\'bf\'ec\'c1\'f6 \'be\'ca\'b4\'c2 \'b8\'ee\'b8\'ee \'b8\'de\'c5\'b8\'b9\'ae\'c0\'da\'c0\'c7 \'c0\'c7\'b9\'cc, \'b1\'d7\'b7\'ec \'b8\'b8\'b5\'e9\'b1\'e2, \'c0\'fc\'b9\'e6 \'c5\'bd\'bb\'f6 \'b5\'ee \'b4\'f5\'bf\'ed \'b4\'d9\'be\'e7\'c7\'d1 \'c7\'a5\'c7\'f6\
+\
+
+\f0\b \ul ** \'b8\'de\'c5\'b8 \'b9\'ae\'c0\'da
+\f1\b0 \ulnone \
+- \'be\'d5\'bc\'ad \'bb\'ec\'c6\'ec\'ba\'bb +, *, [], \{\}\'b5\'ee\'c0\'c7 \'b8\'de\'c5\'b8 \'b9\'ae\'c0\'da\'b4\'c2 \'b8\'c5\'c4\'a1\'b0\'a1 \'c1\'f8\'c7\'e0\'b5\'c9 \'b6\'a7 \'c7\'f6\'c0\'e7 \'b8\'c5\'c4\'a1\'b5\'c7\'b0\'ed \'c0\'d6\'b4\'c2 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'c7 \'c0\'a7\'c4\'a1\'b0\'a1 \'ba\'af\'b0\'e6\'b5\'c8\'b4\'d9. (\'ba\'b8\'c5\'eb \'bc\'d2\'ba\'f1\'b5\'c8\'b4\'d9\'b0\'ed \'c7\'a5\'c7\'f6)\
+- \'c0\'cc\'bf\'cd \'b4\'de\'b8\'ae \'b9\'ae\'c0\'da\'bf\'ad\'c0\'bb \'bc\'d2\'ba\'f1\'bd\'c3\'c5\'b0\'c1\'f6 \'be\'ca\'b4\'c2 \'b8\'de\'c5\'b8 \'b9\'ae\'c0\'da\'b5\'b5 \'c0\'d6\'b4\'d9. (zero-width assertions)\
+\
+
+\f0\b * |
+\f1\b0 \
+- |\'b4\'c2 or\'b0\'fa \'b5\'bf\'c0\'cf\'c7\'d1 \'c0\'c7\'b9\'cc\'b7\'ce \'bb\'e7\'bf\'eb\'b5\'c8\'b4\'d9.\
+- A|B\'b6\'f3\'b4\'c2 \'c1\'a4\'b1\'d4\'bd\'c4\'c0\'cc \'c0\'d6\'b4\'d9\'b8\'e9 A \'b6\'c7\'b4\'c2 B\'b6\'f3\'b4\'c2 \'c0\'c7\'b9\'cc\'b0\'a1 \'b5\'c8\'b4\'d9.\
+\
+p = re.compile('Crow|Servo')\
+m = p.match("CrowHello")\
+print(m)\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 <re.Match object; span=(0, 4), match='Crow'>\
+
+\f1\fs40 \cf0 \CocoaLigature1 \
+
+\f0\b * ^
+\f1\b0 \
+- ^\'b4\'c2 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'c7 \'b8\'c7 \'c3\'b3\'c0\'bd\'b0\'fa \'c0\'cf\'c4\'a1\'c7\'d4\'c0\'bb \'c0\'c7\'b9\'cc\'c7\'d1\'b4\'d9.\
+- MULTILINE\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d2 \'b0\'e6\'bf\'ec\'bf\'a1\'b4\'c2 \'bf\'a9\'b7\'af \'c1\'d9\'c0\'c7 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'cf \'b6\'a7, \'b0\'a2 \'c1\'d9\'c0\'c7 \'c3\'b3\'c0\'bd\'b0\'fa \'c0\'cf\'c4\'a1\'c7\'cf\'b0\'d4 \'b5\'c8\'b4\'d9.\
+\
+print(re.search('^Life', 'Life is too short'))\
+>>>
+\f2\fs36 \cf2 \CocoaLigature0 <re.Match object; span=(0, 4), match='Life'>
+\f1\fs40 \cf0 \CocoaLigature1 \
+print(re.search('^Life', 'My Life'))\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 None\
+
+\f1\fs40 \cf0 \CocoaLigature1 \
+
+\f0\b * $
+\f1\b0 \
+- $ \'b8\'de\'c5\'b8 \'b9\'ae\'c0\'da\'b4\'c2 ^\'bf\'cd \'b9\'dd\'b4\'eb\'c0\'c7 \'b0\'e6\'bf\'ec\'c0\'cc\'b4\'d9.\
+\
+print(re.search('short$', 'Life is too short\'a1\'af))\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 <re.Match object; span=(12, 17), match='short'>
+\f1\fs40 \cf0 \CocoaLigature1 \
+print(re.search('short$', 'Life is too short, you need python'))\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 None\
+
+\f1\fs40 \cf0 \CocoaLigature1 \
+
+\f0\b * \\A
+\f1\b0 \
+- ^\'bf\'cd \'b5\'bf\'c0\'cf \'c7\'d1 \'c0\'c7\'b9\'cc\
+- MULTILINE\'c0\'bb \'bb\'e7\'bf\'eb \'c7\'d2 \'b6\'a7, ^\'bf\'cd \'b4\'de\'b8\'ae \'c1\'d9\'b0\'fa \'bb\'f3\'b0\'fc\'be\'f8\'c0\'cc \'c0\'fc\'c3\'bc \'b9\'ae\'c0\'da\'bf\'ad\'c0\'c7 \'c3\'b3\'c0\'bd\'c7\'cf\'b0\'ed\'b8\'b8 \'b8\'c5\'c4\'a1\'b5\'c8\'b4\'d9.\
+\
+
+\f0\b * \\Z
+\f1\b0 \
+- $\'bf\'cd \'b0\'b0\'b4\'d9.\
+- \'b8\'b6\'c2\'f9\'b0\'a1\'c1\'f6\'b7\'ce MULTILINE\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d2 \'b6\'a7, $\'bf\'cd \'b4\'de\'b8\'ae \'c1\'d9\'b0\'fa \'bb\'f3\'b0\'fc\'be\'f8\'c0\'cc \'c0\'fc\'c3\'bc \'b9\'ae\'c0\'da\'bf\'ad\'c0\'c7 \'b3\'a1\'b0\'fa \'b8\'c5\'c4\'a1\'b5\'c8\'b4\'d9.\
+\
+
+\f0\b * \\b
+\f1\b0 \
+- \'b4\'dc\'be\'ee\'b1\'b8\'ba\'d0\'c0\'da (Word Boundary)\'c0\'cc\'b4\'d9.\
+- \'ba\'b8\'c5\'eb \'b4\'dc\'be\'ee\'b4\'c2 whitespace\'bf\'a1 \'c0\'c7\'c7\'d8 \'b1\'b8\'ba\'d0\'b5\'c8\'b4\'d9.\
+\
+p = re.compile(r'\\bclass\\b')\
+print(p.search('no class at all'))\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 <re.Match object; span=(3, 8), match='class'>\
+
+\f1\fs40 \cf0 \CocoaLigature1 print(p.search('the declassified algorithm'))\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 None\
+
+\f1\fs40 \cf0 \CocoaLigature1 print(p.search('one subclass is'))\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 None
+\f1\fs40 \cf0 \CocoaLigature1 \
+\
+- \'be\'d5 \'b5\'da\'b0\'a1 \'b0\'f8\'b9\'e9\'c0\'cf \'b6\'a7\'b8\'b8 match \'b5\'c7\'b4\'c2 \'b0\'cd\'c0\'bb \'be\'cb \'bc\'f6 \'c0\'d6\'b4\'d9.\
+- \'c1\'d6\'c0\'c7 : \\b\'b4\'c2 \'c6\'c4\'c0\'cc\'bd\'e3 \'b8\'ae\'c5\'cd\'b7\'b2 \'b1\'d4\'c4\'a2\'bf\'a1 \'c0\'c7\'c7\'d8 \'b9\'e9\'bd\'ba\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 \'c0\'c7\'b9\'cc\'c7\'cf\'b9\'c7\'b7\'ce, \'b4\'dc\'be\'ee \'b1\'b8\'ba\'d0\'c0\'da\'c0\'d3\'c0\'bb \'be\'cb\'b7\'c1\'c1\'d6\'b1\'e2 \'c0\'a7\'c7\'d8 Raw String\'c0\'d3\'c0\'bb \'be\'cf\'bd\'c3\'c7\'cf\'b4\'c2 r\'c0\'bb \'b9\'dd\'b5\'e5\'bd\'c3 \'ba\'d9\'bf\'a9\'c1\'d6\'be\'ee\'be\'df\'c7\'d1\'b4\'d9. (r\'a1\'af\\bclass\\b\'a1\'af)\
+\
+
+\f0\b * \\B
+\f1\b0 \
+- \\b\'bf\'cd \'b9\'dd\'b4\'eb\'b7\'ce, whitespace\'b7\'ce \'b1\'b8\'ba\'d0\'b5\'c8 \'b4\'dc\'be\'ee\'b0\'a1 \'be\'c6\'b4\'d1 \'b0\'e6\'bf\'ec\'bf\'a1\'b8\'b8 \'b8\'c5\'c4\'a1\'b5\'c8\'b4\'d9.\
+\
+p = re.compile(r'\\Bclass\\B')\
+print(p.search('no class at all'))\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 None
+\f1\fs40 \cf0 \CocoaLigature1 \
+print(p.search('the declassified algorithm'))\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 <re.Match object; span=(6, 11), match='class'>
+\f1\fs40 \cf0 \CocoaLigature1 \
+print(p.search('one subclass is'))\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 None\
+
+\f1\fs40 \cf0 \CocoaLigature1 \
+
+\f0\b \ul ** \'b1\'d7\'b7\'e7\'c7\'ce
+\f1\b0 \ulnone \
+- ABC \'b9\'ae\'c0\'da\'bf\'ad\'c0\'cc \'b0\'e8\'bc\'d3\'c7\'d8\'bc\'ad \'b9\'dd\'ba\'b9\'b5\'c7\'b4\'c2\'c1\'f6 \'c1\'b6\'bb\'e7\'c7\'cf\'b4\'c2 \'c1\'a4\'b1\'d4\'bd\'c4\'c0\'bb \'c0\'db\'bc\'ba\'c7\'cf\'b0\'ed \'bd\'cd\'b4\'d9\'b0\'ed \'c7\'cf\'c0\'da\'a1\'a6 \'c0\'cc\'b7\'b2 \'b6\'a7 \'c7\'ca\'bf\'e4\'c7\'d1 \'b0\'cd\'c0\'cc \'b1\'d7\'b7\'e7\'c7\'ce \'c0\'cc\'b4\'d9.\
+(ABC)+\
+\
+- \'b1\'d7\'b7\'ec\'c0\'bb \'b8\'b8\'b5\'e9\'be\'ee\'c1\'d6\'b4\'c2 \'b8\'de\'c5\'b8 \'b9\'ae\'c0\'da\'b4\'c2 \'b9\'d9\'b7\'ce ( ) \'c0\'cc\'b4\'d9.\
+\
+p = re.compile('(ABC)+')\
+m = p.search('ABCABCABC OK?')\
+print(m)\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 <re.Match object; span=(0, 9), match='ABCABCABC'>
+\f1\fs40 \cf0 \CocoaLigature1 \
+print(m.group(0))\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 ABCABCABC
+\f1\fs40 \cf0 \CocoaLigature1 \
+\
+p = re.compile(r"\\w+\\s+\\d+[-]\\d+[-]\\d+")\
+m = p.search("park 010-2054-9719")\
+- \'c0\'a7 \'bf\'b9\'bf\'a1\'bc\'ad \'c0\'cc\'b8\'a7\'b8\'b8 \'bb\'cc\'b0\'ed \'bd\'cd\'c0\'bb \'b6\'a7\'bf\'a1\'b5\'b5 \'b1\'d7\'b7\'ec\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d1\'b4\'d9.\
+\
+p = re.compile(r"(\\w+)\\s+\\d+[-]\\d+[-]\\d+")\
+m = p.search("park 010-2054-9719")\
+print(m.group(1))\
+- \'c0\'cc\'b7\'b8\'b0\'d4 \'c0\'cc\'b8\'a7 \'ba\'ce\'ba\'d0\'c0\'bb ( )\'b7\'ce \'b9\'ad\'be\'ee\'c1\'d6\'be\'ee \'bb\'cc\'c0\'bb \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+p = re.compile(r"(\\w+)\\s+(\\d+[-]\\d+[-]\\d+)")\
+m = p.search("park 010-2054-9719")\
+print(m.group(2))\
+- \'c0\'c0\'bf\'eb\'c7\'cf\'bf\'a9, \'b4\'d9\'c0\'bd\'b0\'fa \'b0\'b0\'c0\'cc \'c0\'fc\'c8\'ad\'b9\'f8\'c8\'a3\'b8\'a6 \'bb\'cc\'be\'c6\'b3\'be \'bc\'f6\'b5\'b5 \'c0\'d6\'b4\'d9.\
+\
+p = re.compile(r"(\\w+)\\s+((\\d+)[-]\\d+[-]\\d+)")\
+m = p.search("park 010-2054-9719")\
+print(m.group(3))\
+- \'b1\'b9\'b9\'f8 \'bb\'cc\'be\'c6\'b3\'bb\'b1\'e2\
+- \'b1\'d7\'b7\'ec\'c0\'bb \'c1\'df\'c3\'b8\'b5\'c7\'b0\'d4 \'bb\'e7\'bf\'eb\'c7\'d2 \'b6\'a7, \'b9\'d9\'b1\'f9\'c2\'ca\'ba\'ce\'c5\'cd \'bd\'c3\'c0\'db\'c7\'cf\'bf\'a9 \'be\'c8\'c2\'ca\'c0\'b8\'b7\'ce \'b5\'e9\'be\'ee\'b0\'a5\'bc\'f6\'b7\'cf \'c0\'ce\'b5\'a6\'bd\'ba\'b0\'a1 \'c1\'f5\'b0\'a1\'c7\'d1\'b4\'d9.\
+- group(0)\'c0\'ba \'b8\'c5\'c4\'a1\'b5\'c8 \'c0\'fc\'c3\'bc \'b9\'ae\'c0\'da\'bf\'ad\'c0\'cc\'b4\'d9.\
+\
+
+\f0\b * \'b1\'d7\'b7\'e7\'c7\'ce\'b5\'c8 \'b9\'ae\'c0\'da\'bf\'ad \'c0\'e7\'c2\'fc\'c1\'b6\'c7\'cf\'b1\'e2
+\f1\b0 \
+p = re.compile(r'(\\b\\w+)\\s+\\1')\
+p.search('Paris in the the spring').group()\
+- (\'b1\'d7\'b7\'ec) + \'a1\'b0\'a1\'b1 + \'b1\'d7\'b7\'ec\'b0\'fa \'b5\'bf\'c0\'cf\'c7\'d1 \'b4\'dc\'be\'ee \'bf\'cd \'b8\'c5\'c4\'a1\'b5\'ca\
+- \'c0\'cc \'b6\'a7 \'b5\'bf\'c0\'cf\'c7\'d1 \'b4\'dc\'be\'ee\'b8\'a6 \'b8\'c5\'c4\'a1\'c7\'d8\'c1\'d6\'b4\'c2 \'b0\'cd\'c0\'cc \'c0\'e7\'c2\'fc\'c1\'b6 \'b8\'de\'c5\'b8 \'b9\'ae\'c0\'da\'c0\'ce \\1\'c0\'cc\'b4\'d9.\
+- \\1\'c0\'ba \'c1\'a4\'b1\'d4\'bd\'c4\'c0\'c7 \'b1\'d7\'b7\'ec \'c1\'df \'c3\'b9 \'b9\'f8\'c2\'b0 \'b1\'d7\'b7\'ec\'c0\'bb \'b0\'a1\'b8\'a3\'c5\'b2\'b4\'d9.\
+\
+
+\f0\b \ul ** \'b1\'d7\'b7\'e7\'c7\'ce\'b5\'c8 \'b9\'ae\'c0\'da\'bf\'ad\'bf\'a1 \'c0\'cc\'b8\'a7 \'ba\'d9\'c0\'cc\'b1\'e2
+\f1\b0 \ulnone \
+- \'c1\'a4\'b1\'d4\'bd\'c4 \'be\'c8\'bf\'a1 \'b1\'d7\'b7\'ec\'c0\'cc \'b9\'ab\'c3\'b4 \'b8\'b9\'be\'c6\'c1\'f8\'b4\'d9\'b8\'e9?\
+- \'c1\'a4\'b1\'d4\'bd\'c4\'c0\'cc \'bc\'f6\'c1\'a4\'b5\'c7\'b8\'e9\'bc\'ad \'b1\'d7\'b7\'ec\'c0\'cc \'c3\'df\'b0\'a1, \'bb\'e8\'c1\'a6\'b5\'c7\'b8\'e9, \'b1\'d7\'b0\'cd\'c0\'bb \'c2\'fc\'c1\'b6\'c7\'d1 \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a5\'b5\'b5 \'b8\'f0\'b5\'ce \'ba\'af\'b0\'e6\'c7\'d8 \'c1\'d6\'be\'ee\'be\'df \'c7\'cf\'b4\'c2 \'c0\'a7\'c7\'e8\'b5\'b5 \'b0\'ae\'b0\'d4 \'b5\'ca\
+- \'b1\'d7\'b7\'ec\'c0\'bb \'c0\'ce\'b5\'a6\'bd\'ba\'b0\'a1 \'be\'c6\'b4\'d1 \'c0\'cc\'b8\'a7\'c0\'b8\'b7\'ce \'c2\'fc\'c1\'b6\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9\'b8\'e9?\
+\
+(?P<name>\\w+)\\s+((\\d+)[-]\\d+[-]\\d+)\
+- \'c0\'a7\'c0\'c7 \'c0\'fc\'c8\'ad\'b9\'f8\'c8\'a3 \'c1\'a4\'b1\'d4\'bd\'c4\'a1\'a6\
+- \'b4\'de\'b6\'f3\'c1\'f8 \'b0\'cd : (\\w+)\'b0\'a1 (?P<name>\\w+)\'b7\'ce \'b9\'d9\'b2\'f1!\
+\
+- \'c8\'ae\'c0\'e5\'b1\'b8\'b9\'ae\
+(?P<\'b1\'d7\'b7\'ec \'c0\'cc\'b8\'a7>...)\
+\
+p = re.compile(r"(?P<name>\\w+)\\s+((\\d+)[-]\\d+[-]\\d+)")\
+m = p.search("park 010-1234-1234")\
+print(m.group("name"))\
+>>> park\
+- park\'c0\'cc\'b6\'f3\'b4\'c2 \'b1\'d7\'b7\'ec \'c0\'cc\'b8\'a7\'c0\'b8\'b7\'ce \'c2\'fc\'c1\'b6\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+p = re.compile(r"(?P<word>\\b\\w+)\\s+(?P=word)")\
+p.search("Paris is the the spring").group()\
+>>> the the\
+- \'c0\'a7 \'bf\'b9\'bf\'a1\'bc\'ad \'ba\'bc \'bc\'f6 \'c0\'d6\'b5\'ed\'c0\'cc \'c0\'e7\'c2\'fc\'c1\'b6\'b5\'b5 \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+- \'c0\'cc \'b6\'a7\'b4\'c2 (?P=\'b1\'d7\'b7\'ec\'c0\'cc\'b8\'a7)\'c0\'cc\'b6\'f3\'b4\'c2 \'c8\'ae\'c0\'e5\'b1\'b8\'b9\'ae\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d1\'b4\'d9.\
+\
+
+\f0\b \ul ** \'c0\'fc\'b9\'e6\'c5\'bd\'bb\'f6
+\f1\b0 \ulnone \
+- \'c1\'a4\'b1\'d4\'bd\'c4\'bf\'a1 \'c0\'d4\'b9\'ae\'c7\'d1 \'bb\'e7\'b6\'f7\'b5\'e9\'c0\'cc \'b0\'a1\'c0\'e5 \'be\'ee\'b7\'c1\'bf\'f6\'c7\'d4\'a1\'a6 Lookahead Asertions\
+- \'c0\'fc\'b9\'e6\'c5\'bd\'bb\'f6 \'c8\'ae\'c0\'e5\'b1\'b8\'b9\'ae\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9, \'bc\'f8\'bd\'c4\'b0\'a3\'bf\'a1 \'be\'cf\'c8\'a3\'b9\'ae\'c3\'b3\'b7\'b3 \'be\'cb\'be\'c6\'ba\'b8\'b1\'e2 \'be\'ee\'b7\'c6\'b0\'d4 \'b9\'d9\'b2\'ef\'b4\'d9. \'c7\'cf\'c1\'f6\'b8\'b8 \'b2\'c0 \'c7\'ca\'bf\'e4\'c7\'d1 \'b0\'e6\'bf\'ec\'b5\'b5 \'c0\'d6\'b0\'ed \'b8\'c5\'bf\'ec \'c0\'af\'bf\'eb\'c7\'cf\'b0\'d4 \'be\'b2\'c0\'ce\'b4\'d9.\
+\
+p = re.compile(".+:")\
+m = p.search("http://google.com")\
+print(m.group())\
+>>> http:\
+\
+- \'b8\'b8\'be\'e0 \'b0\'e1\'b0\'fa\'bf\'a1\'bc\'ad :\'b8\'a6 \'c1\'a6\'bf\'dc\'c7\'cf\'b0\'ed \'c3\'e2\'b7\'c2\'c7\'cf\'b7\'c1\'b8\'e9? \'a1\'a6 \'b1\'d7\'b7\'e7\'c7\'ce\'c0\'bb \'c3\'df\'b0\'a1\'b7\'ce \'ba\'d2\'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9\'b8\'e9?\
+- \'c0\'cc\'b7\'b2 \'b6\'a7 \'c0\'fc\'b9\'e6\'c5\'bd\'bb\'f6\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9\'a1\'a6\
+(?=...) : \'b1\'e0\'c1\'a4\'c7\'fc \'c0\'fc\'b9\'e6 \'c5\'bd\'bb\'f6 : ...\'bf\'a1 \'c7\'d8\'b4\'e7\'c7\'cf\'b4\'c2 \'c1\'a4\'b1\'d4\'bd\'c4\'b0\'fa \'b8\'c5\'c4\'a1\'b5\'c7\'be\'ee\'be\'df \'c7\'cf\'b8\'e7 \'c1\'b6\'b0\'c7\'c0\'cc \'c5\'eb\'b0\'fa\'b5\'c7\'be\'ee\'b5\'b5 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'cc \'bc\'d2\'ba\'f1\'b5\'c7\'c1\'f6 \'be\'ca\'b4\'c2\'b4\'d9.\
+(?!...) : \'ba\'ce\'c1\'a4\'c7\'fc \'c0\'fc\'b9\'e6 \'c5\'bd\'bb\'f6 ...\'bf\'a1 \'c7\'d8\'b4\'e7\'c7\'cf\'b4\'c2 \'c1\'a4\'b1\'d4\'bd\'c4\'b0\'fa \'b8\'c5\'c4\'a1\'b5\'c7\'c1\'f6 \'be\'ca\'be\'c6\'be\'df \'c7\'cf\'b8\'e7 \'c1\'b6\'b0\'c7\'c0\'cc \'c5\'eb\'b0\'fa\'b5\'c7\'be\'ee\'b5\'b5 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'cc \'bc\'d2\'ba\'f1\'b5\'c7\'c1\'f6 \'be\'ca\'b4\'c2\'b4\'d9.\
+\
+p = re.compile(".+(?=:)")\
+m = p.search("http://google.com")\
+print(m.group())\
+>>> http\
+- \'b0\'cb\'bb\'f6\'bf\'a1\'bc\'ad\'b4\'c2 \'b5\'bf\'c0\'cf\'c7\'d1 \'c8\'bf\'b0\'fa\'b8\'a6 \'b9\'df\'c8\'d6\'c7\'cf\'c1\'f6\'b8\'b8, :\'bf\'a1 \'c7\'d8\'b4\'e7\'c7\'cf\'b4\'c2 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'cc \'c1\'a4\'b1\'d4\'bd\'c4 \'bf\'a3\'c1\'f8\'bf\'a1 \'c0\'c7\'c7\'d8 \'bc\'d2\'ba\'f1\'b5\'c7\'c1\'f6 \'be\'ca\'be\'c6 (\'b0\'cb\'bb\'f6\'bf\'a1\'b4\'c2 \'c6\'f7\'c7\'d4\'b5\'c7\'c1\'f6\'b8\'b8 \'b0\'cb\'bb\'f6 \'b0\'e1\'b0\'fa\'bf\'a1\'bc\'ad\'b4\'c2 \'c1\'a6\'bf\'dc\'b5\'ca) \'b0\'cb\'bb\'f6 \'b0\'e1\'b0\'fa\'bf\'a1\'bc\'ad\'b4\'c2 :\'c0\'cc \'c1\'a6\'b0\'c5\'b5\'c8 \'c8\'c4 \'b5\'b9\'b7\'c1\'c1\'d6\'b4\'c2 \'c8\'bf\'b0\'fa\'b0\'a1 \'c0\'d6\'b4\'d9.\
+\
+.*[.].*$\
+- \'c6\'c4\'c0\'cf\'c0\'cc\'b8\'a7 . \'c8\'ae\'c0\'e5\'c0\'da\'b8\'a6 \'b3\'aa\'c5\'b8\'b3\'bf\
+- foo.bar, autoexec.bat, sendmail.cf \'b0\'b0\'c0\'ba \'c7\'fc\'bd\'c4\'c0\'c7 \'c6\'c4\'c0\'cf\'b0\'fa \'b8\'c5\'c4\'a1 \'b5\'ca\
+- \'c0\'cc \'b6\'a7 \'c8\'ae\'c0\'e5\'c0\'da\'b0\'a1 bat\'c0\'ce \'c6\'c4\'c0\'cf\'c0\'ba \'c1\'a6\'bf\'dc\'c7\'d8\'be\'df \'c7\'d1\'b4\'d9\'b4\'c2 \'c1\'b6\'b0\'c7\'c0\'bb \'c3\'df\'b0\'a1\'c7\'d8\'ba\'b8\'b8\'e9?\
+\
+.*[.][^b].*$\
+- b\'b7\'ce \'bd\'c3\'c0\'db\'c7\'cf\'b4\'c2 \'b9\'ae\'c0\'da\'b8\'a6 \'b8\'b7\'be\'c6\'c1\'d8\'b4\'d9.\
+- \'c7\'cf\'c1\'f6\'b8\'b8 bat\'bb\'d3 \'be\'c6\'b4\'cf\'b6\'f3 bar\'b5\'b5 \'b8\'b7\'b4\'c2 \'b9\'ae\'c1\'a6\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'d1\'b4\'d9.\
+\
+.*[.]([^b]..|.[^a].|..[^t])$\
+- |\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'bf\'a9, \'c3\'b9\'b9\'f8\'c2\'b0\'b0\'a1 b\'b0\'a1 \'be\'c6\'b4\'cf\'b0\'c5\'b3\'aa \'b5\'ce\'b9\'f8\'c2\'b0\'b0\'a1 a\'b0\'a1 \'be\'c6\'b4\'cf\'b0\'c5\'b3\'aa \'bc\'bc\'b9\'f8\'c2\'b0\'b0\'a1 t\'b0\'a1 \'be\'c6\'b4\'d1 \'b0\'e6\'bf\'ec\'b8\'a6 \'c0\'c7\'b9\'cc\'a1\'a6 \'c7\'cf\'c1\'f6\'b8\'b8 \'c8\'ae\'c0\'e5\'c0\'da\'c0\'c7 \'b9\'ae\'c0\'da \'bc\'f6\'b0\'a1 2\'b0\'b3\'c0\'ce \'b0\'e6\'bf\'ec\'b8\'a6 \'c8\'ae\'c0\'ce\'c7\'d8\'c1\'d6\'c1\'f6 \'b8\'f8\'c7\'d1\'b4\'d9.\
+\
+.*[.]([^b].?.?|.[^a]?.?|..?[^t]?)$\
+- \'b5\'fb\'b6\'f3\'bc\'ad \'c0\'a7\'bf\'cd \'b0\'b0\'c0\'cc \'c7\'d8\'c1\'d6\'be\'ee \'b9\'ae\'c1\'a6\'c1\'a1\'c0\'bb \'c7\'d8\'b0\'e1\'c7\'d8\'c1\'d9 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+- \'c7\'cf\'c1\'f6\'b8\'b8 \'c1\'a1\'c1\'a1 \'ba\'b9\'c0\'e2\'c7\'d8\'c1\'fc\
+- \'c0\'cc \'b6\'a7, exe \'c6\'c4\'c0\'cf\'b5\'b5 \'c1\'a6\'b0\'c5\'c7\'d8\'be\'df \'c7\'d1\'b4\'d9\'b4\'c2 \'b0\'cd\'c0\'cc \'c3\'df\'b0\'a1\'b5\'c8\'b4\'d9\'b8\'e9?\
+\
+
+\f0\b * \'ba\'ce\'c1\'a4\'c7\'fc \'c0\'fc\'b9\'e6 \'c5\'bd\'bb\'f6
+\f1\b0 \
+- \'b9\'d9\'b7\'ce \'c0\'cc\'b7\'b1 \'b0\'e6\'bf\'ec \'ba\'ce\'c1\'a4\'c7\'fc \'c0\'fc\'b9\'e6 \'c5\'bd\'bb\'f6\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d8\'c1\'d9 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+.*[.](?!bat$).*$\
+- \'c8\'ae\'c0\'e5\'c0\'da\'b0\'a1 bat\'b0\'a1 \'be\'c6\'b4\'d1 \'b0\'e6\'bf\'ec\'bf\'a1\'b8\'b8 \'c5\'eb\'b0\'fa\'b5\'c8\'b4\'d9\'a1\'a6\
+- \'b9\'ae\'c0\'da\'bf\'ad\'c0\'cc \'bc\'d2\'ba\'f1\'b5\'c7\'c1\'f6 \'be\'ca\'c0\'b8\'b9\'c7\'b7\'ce bat\'b0\'a1 \'be\'c6\'b4\'cf\'b6\'f3\'b0\'ed \'c6\'c7\'b4\'dc\'c7\'cf\'b8\'e9 \'b1\'d7 \'c0\'cc\'c8\'c4 \'c1\'a4\'b1\'d4\'bd\'c4 \'b8\'c5\'c4\'a1\'b0\'a1 \'c1\'f8\'c7\'e0\'b5\'c8\'b4\'d9.\
+\
+.*[.](?!bat$|exe$).*$\
+- exe\'b8\'a6 \'c1\'a6\'bf\'dc\'c7\'cf\'b4\'c2 \'c1\'b6\'b0\'c7\'c0\'cc \'c3\'df\'b0\'a1\'b5\'c7\'be\'ee\'b5\'b5 \'b4\'d9\'c0\'bd\'b0\'fa \'b0\'b0\'c0\'cc \'b0\'a3\'b4\'dc\'c8\'f7 \'c7\'a5\'c7\'f6\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+
+\f0\b \ul ** \'b9\'ae\'c0\'da\'bf\'ad \'b9\'d9\'b2\'d9\'b1\'e2
+\f1\b0 \ulnone \
+- sub \'b8\'de\'bc\'d2\'b5\'e5\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9 \'c1\'a4\'b1\'d4\'bd\'c4\'b0\'fa \'b8\'c5\'c4\'a1\'b5\'c7\'b4\'c2 \'ba\'ce\'ba\'d0\'c0\'bb \'b4\'d9\'b8\'a5 \'b9\'ae\'c0\'da\'b7\'ce \'bd\'b1\'b0\'d4 \'b9\'d9\'b2\'dc \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+p = re.compile('(blue|white|red)')\
+p.sub('colour','blue socks and red shoes')\
+>>> colour socks and colour shoes\
+- sub \'b8\'de\'bc\'ad\'b5\'e5\'c0\'c7 \'c3\'b9 \'b9\'f8\'c2\'b0 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b4\'c2 \'a1\'ae\'b9\'d9\'b2\'dc \'b9\'ae\'c0\'da\'bf\'ad replacement\'a1\'af\'b0\'a1 \'b5\'c7\'b0\'ed, \'b5\'ce \'b9\'f8\'c2\'b0 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b4\'c2 \'a1\'ae\'b4\'eb\'bb\'f3 \'b9\'ae\'c0\'da\'bf\'ad\'a1\'af\'c0\'cc \'b5\'c8\'b4\'d9.\
+\
+p = re.compile('(blue|white|red)')\
+p.sub('colour','blue socks and red shoes', count=1)\
+>>> colour socks and red shoes\
+- count\'b0\'aa\'c0\'bb \'bc\'bc\'b9\'f8\'c2\'b0 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b7\'ce \'b3\'d6\'be\'ee \'b5\'bf\'c0\'db\'c8\'bd\'bc\'f6\'b8\'a6 \'c1\'f6\'c1\'a4\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+
+\f0\b * subn
+\f1\b0 \
+- sub\'bf\'cd \'b5\'bf\'c0\'cf\'c7\'d1 \'b1\'e2\'b4\'c9\'c0\'bb \'c7\'cf\'c1\'f6\'b8\'b8, \'b9\'dd\'c8\'af\'b0\'e1\'b0\'fa\'b8\'a6 \'c6\'a9\'c7\'c3\'b7\'ce \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+- \'c3\'b9\'b9\'f8\'c2\'b0 \'bf\'e4\'bc\'d2\'b4\'c2 \'ba\'af\'b0\'e6\'b5\'c8 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'cc\'b0\'ed , \'b5\'ce\'b9\'f8\'c2\'b0 \'bf\'e4\'bc\'d2\'b4\'c2 \'b9\'d9\'b2\'d9\'b1\'e2\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'d1 \'c8\'bd\'bc\'f6\'c0\'cc\'b4\'d9.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 p = re.compile('(blue|white|red)')\
+p.subn(\'a1\'aecolour','blue socks and red shoes')\
+>>> (\'a1\'aecolour socks and colour shoes\'a1\'af, 2)\
+\
+
+\f0\b * sub \'b8\'de\'bc\'ad\'b5\'e5\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d2 \'b6\'a7 \'c2\'fc\'c1\'b6 \'b1\'b8\'b9\'ae \'bb\'e7\'bf\'eb\'c7\'cf\'b1\'e2
+\f1\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 p = re.compile(r"(?P<name>\\w+)\\s+(?P<phone>(\\d+)[-]\\d+[-]\\d+)")\
+print(p.sub("\\g<phone> \\g<name>", "park 010-1234-1234"))\
+>>> 010-1234-1234 park\
+- sub\'c0\'c7 \'b9\'d9\'b2\'dc \'b9\'ae\'c0\'da\'bf\'ad \'ba\'ce\'ba\'d0\'bf\'a1 \\g<\'b1\'d7\'b7\'ec \'c0\'cc\'b8\'a7>\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9 \'c1\'a4\'b1\'d4\'bd\'c4\'c0\'c7 \'b1\'d7\'b7\'ec \'c0\'cc\'b8\'a7\'c0\'bb \'c2\'fc\'c1\'b6\'c7\'d2 \'bc\'f6 \'c0\'d6\'b0\'d4 \'b5\'c8\'b4\'d9.\
+\
+p = re.compile(r"(?P<name>\\w+)\\s+(?P<phone>(\\d+)[-]\\d+[-]\\d+)")\
+print(p.sub("\\g<2> \\g<1>", "park 010-1234-1234"))\
+- \'b4\'d9\'c0\'bd\'b0\'fa \'b0\'b0\'c0\'cc \'b9\'f8\'c8\'a3\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d8\'b5\'b5 \'b8\'b6\'c2\'f9\'b0\'a1\'c1\'f6 \'b0\'e1\'b0\'fa\'b8\'a6 \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+\
+
+\f0\b \ul ** sub \'b8\'de\'bc\'ad\'b5\'e5\'c0\'c7 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b7\'ce \'c7\'d4\'bc\'f6 \'b3\'d6\'b1\'e2
+\f1\b0 \ulnone \
+def hexrepl(match):\
+    value = int(match.group())\
+    return hex(value)\
+\
+p = re.compile(r'\\d+')\
+p.sub(hexrepl, 'Call 65490 for printing, 49512 for user code')\
+\
+- hexrepl \'c7\'d4\'bc\'f6\'b4\'c2 match\'c0\'c7 \'b0\'b4\'c3\'bc\'b8\'a6 \'c0\'d4\'b7\'c2\'b9\'de\'be\'c6 16\'c1\'f8\'bc\'f6\'b7\'ce \'ba\'af\'c8\'af\'c7\'cf\'bf\'a9 \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+- sub\'c0\'c7 \'c3\'b9\'b9\'f8\'c2\'b0 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b7\'ce \'c7\'d4\'bc\'f6\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d2 \'b0\'e6\'bf\'ec \'c7\'d8\'b4\'e7 \'c7\'d4\'bc\'f6\'c0\'c7 \'c3\'b9 \'b9\'f8\'c2\'b0 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'bf\'a1\'b4\'c2 \'c1\'a4\'b1\'d4\'bd\'c4\'b0\'fa \'b8\'c5\'c4\'a1\'b5\'c8 match \'b0\'b4\'c3\'bc\'b0\'a1 \'c0\'d4\'b7\'c2\'b5\'c8\'b4\'d9.\
+- \'c0\'cc \'c8\'c4 \'b8\'c5\'c4\'a1\'b5\'c7\'b4\'c2 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'ba \'c7\'d4\'bc\'f6\'c0\'c7 \'b9\'dd\'c8\'af \'b0\'aa\'c0\'b8\'b7\'ce \'b9\'d9\'b2\'ee\'b0\'d4 \'b5\'c8\'b4\'d9.\
+\
+
+\f0\b \ul ** Greedy vs Non-Greedy
+\f1\b0 \ulnone \
+- \'c1\'a4\'b1\'d4\'bd\'c4\'bf\'a1\'bc\'ad \'c5\'bd\'bf\'e5\'bd\'ba\'b7\'af\'bf\'ee, Greedy\'b6\'f5 \'b9\'ab\'bd\'bc \'c0\'c7\'b9\'cc\'c0\'cf\'b1\'ee?\
+\
+s = '<html><head><title>Title</title>'\
+len(s)\
+print(re.match('<.*>',s).span())\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 (0, 32)
+\f1\fs40 \cf0 \CocoaLigature1 \
+print(re.match('<.*>',s).group())\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 <html><head><title>Title</title>\
+
+\f1\fs40 \cf0 \CocoaLigature1 \
+- <html>\'c0\'bb \'b1\'e2\'b4\'eb\'c7\'df\'c0\'b8\'b3\'aa, *\'b8\'de\'c5\'b8 \'b9\'ae\'c0\'da\'b4\'c2 \'b8\'c5\'bf\'ec \'c5\'bd\'bf\'e5\'bd\'ba\'b7\'af\'bf\'f6\'bc\'ad \'b8\'c5\'c4\'a1\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'c2 \'c3\'d6\'b4\'eb\'c7\'d1\'c0\'c7 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'ce <html ~ tle>\'b1\'ee\'c1\'f6 \'b8\'f0\'b5\'ce \'bc\'d2\'ba\'f1\'c7\'d8\'b9\'f6\'b7\'c8\'b4\'d9.\
+- \'c0\'cc\'b8\'a6 \'c1\'a6\'c7\'d1\'c7\'cf\'b7\'c1\'b8\'e9 non-greedy\'b9\'ae\'c0\'da\'c0\'ce ?\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9 \'b5\'c8\'b4\'d9.\
+\
+print(re.match('<.*?>',s).span())\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 (0, 6)
+\f1\fs40 \cf0 \CocoaLigature1 \
+print(re.match('<.*?>',s).group())\
+>>> 
+\f2\fs36 \cf2 \CocoaLigature0 <html>
+\f1\fs40 \cf0 \CocoaLigature1 \
+\
+- non-greedy \'b9\'ae\'c0\'da\'c0\'ce ?\'b4\'c2 *?, +?, ??, \{m,n\}?\'bf\'cd \'b0\'b0\'c0\'cc \'bb\'e7\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9!\
+- \'b0\'a1\'b4\'c9\'c7\'d1 \'c7\'d1 \'b0\'a1\'c0\'e5 \'c3\'d6\'bc\'d2\'c7\'d1\'c0\'c7 \'b9\'dd\'ba\'b9\'c0\'bb \'bc\'f6\'c7\'e0\'c7\'cf\'b5\'b5\'b7\'cf \'b5\'b5\'bf\'cd\'c1\'d6\'b4\'c2 \'bf\'aa\'c7\'d2\'c0\'bb \'c7\'d1\'b4\'d9.\
+\
+\
+\
+\
+******** END!!!!! ********\
+\
+\
+\
+\
+\
+\
+\
+}

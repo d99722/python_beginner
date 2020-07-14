@@ -1,0 +1,303 @@
+{\rtf1\ansi\ansicpg949\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Regular;\f1\fnil\fcharset129 AppleSDGothicNeo-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11000\viewh19580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs42 \cf0 ch 5-1. class\
+\
+
+\f1\b \ul ** \'c5\'ac\'b7\'a1\'bd\'ba\'b4\'c2 \'bf\'d6 \'c7\'ca\'bf\'e4\'c7\'d1\'b0\'a1?
+\f0\b0 \ulnone \
+- C\'be\'f0\'be\'ee\'bf\'a1\'b4\'c2 \'c5\'ac\'b7\'a1\'bd\'ba\'b0\'a1 \'be\'f8\'b4\'d9\'a1\'a6 \'c1\'ef \'be\'f8\'c0\'cc\'b5\'b5 \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a5\'c0\'bb \'c3\'e6\'ba\'d0\'c8\'f7 \'b8\'b8\'b5\'e9 \'bc\'f6 \'c0\'d6\'b4\'d9\'b4\'c2 \'b0\'cd.\
+- \'c7\'cf\'c1\'f6\'b8\'b8 \'c0\'fb\'c0\'e7\'c0\'fb\'bc\'d2\'bf\'a1 \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9 \'c0\'af\'bf\'eb\'c7\'cf\'b0\'d4 \'c8\'b0\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9!\
+\
+
+\f1\b \ul ** \'b0\'e8\'bb\'ea\'b1\'e2 \'b8\'b8\'b5\'e9\'b1\'e2
+\f0\b0 \ulnone \
+(\'b1\'e2\'ba\'bb\'c7\'fc)\
+result = 0\
+\
+def add(num):\
+    global result\
+    result += num\
+    return result\
+\
+print(add(3)) >>> 3\
+print(add(4)) >>> 7\
+\
+- \'c0\'cc\'c0\'fc \'b0\'e1\'b0\'fa\'b0\'aa \'c0\'af\'c1\'f6\'b8\'a6 \'c0\'a7\'c7\'d8 result\'b8\'a6 \'c0\'fc\'bf\'aa\'ba\'af\'bc\'f6\'b7\'ce \'bb\'e7\'bf\'eb (global)\
+\
+(\'c7\'d1 \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a5\'bf\'a1\'bc\'ad 2\'b4\'eb\'c0\'c7 \'b0\'e8\'bb\'ea\'b1\'e2\'b0\'a1 \'c7\'ca\'bf\'e4\'c7\'d1 \'bb\'f3\'c8\'b2\'c0\'cc\'b6\'f3\'b8\'e9?)\
+result1 = 0\
+result2 = 0\
+\
+def add1(num):\
+    global result1\
+    result1 += num\
+    return result1\
+\
+def add2(num):\
+    global result2\
+    result2 += num\
+    return result2\
+\
+print(add1(3)) >> 3\
+print(add1(4)) >> 7\
+print(add2(3)) >> 3\
+print(add2(7)) >> 10\
+\
+- \'bf\'a9\'b1\'e2\'bc\'ad \'b0\'e8\'bb\'ea\'b1\'e2\'b0\'a1 \'c3\'df\'b0\'a1\'c0\'fb\'c0\'b8\'b7\'ce \'b0\'e8\'bc\'d3 \'b4\'c3\'be\'ee\'b3\'ad\'b4\'d9\'b8\'e9? : \'c7\'d1\'b0\'e8\'b0\'a1 \'c0\'d6\'b4\'d9..!\
+\
+(\'c5\'ac\'b7\'a1\'bd\'ba \'c0\'fb\'bf\'eb)\
+class Calculator:\
+    def __init__(self):\
+        self.result=0\
+\
+    def add(self, num):\
+        self.result += num\
+        return self.result\
+\
+cal1 = Calculator()\
+cal2 = Calculator()\
+\
+print(cal1.add(3)) >> 3\
+print(cal1.add(4)) >> 7\
+print(cal2.add(3)) >> 3\
+print(cal2.add(7)) >> 10\
+\
+- Calculator \'c5\'ac\'b7\'a1\'bd\'ba\'b7\'ce \'b8\'b8\'b5\'e7 \'ba\'b0\'b0\'b3\'c0\'c7 \'b0\'e8\'bb\'ea\'b1\'e2 cal1, cal2 (\'c8\'e7\'c8\'f7 \'a1\'ae\'b0\'b4\'c3\'bc\'a1\'af\'b6\'f3\'b0\'ed \'ba\'ce\'b8\'a5\'b4\'d9.)\'b0\'a1 \'b0\'a2\'b0\'a2\'c0\'c7 \'bf\'aa\'c7\'d2\'c0\'bb \'bc\'f6\'c7\'e0\'c7\'d1\'b4\'d9.\
+- \'b4\'d9\'b8\'a5 \'b0\'e8\'bb\'ea\'b1\'e2\'c0\'c7 \'b0\'e1\'b0\'fa\'b0\'aa\'b0\'fa \'bb\'f3\'b0\'fc\'be\'f8\'c0\'cc \'b5\'b6\'b8\'b3\'c0\'fb\'c0\'ce \'b0\'aa\'c0\'bb \'c0\'af\'c1\'f6\'c7\'d1\'b4\'d9.\
+- \'b0\'e8\'bb\'ea\'b1\'e2 \'b4\'eb\'bc\'f6\'b0\'a1 \'b4\'c3\'be\'ee\'b3\'aa\'b4\'f5\'b6\'f3\'b5\'b5, \'b1\'d7\'c0\'fa \'b0\'b4\'c3\'bc\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'cf\'b8\'e9 \'b5\'c7\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1, \'b8\'c5\'bf\'ec \'b0\'a3\'b4\'dc\'c7\'d8\'c1\'f8\'b4\'d9.\
+- \'b4\'d9\'c0\'bd\'b0\'fa \'b0\'b0\'c0\'cc \'bb\'a9\'b1\'e2 \'b1\'e2\'b4\'c9\'c0\'bb \'c3\'df\'b0\'a1\'c7\'d8\'c1\'d9 \'bc\'f6\'b5\'b5 \'c0\'d6\'b4\'d9.\
+    def sub(self,num):\
+        self.result -= num\
+        return self.result\
+\
+
+\f1\b \ul ** \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'cd \'b0\'b4\'c3\'bc
+\f0\b0 \ulnone \
+- \'c5\'ac\'b7\'a1\'bd\'ba\'b4\'c2 \'a1\'b0\'b0\'fa\'c0\'da \'c6\'b2\'a1\'b1\'b0\'fa \'ba\'f1\'bd\'c1\'c7\'cf\'b4\'d9. : \'b9\'ab\'be\'f9\'c0\'ce\'b0\'a1\'b8\'a6 \'b0\'e8\'bc\'d3 \'b8\'b8\'b5\'e9\'be\'ee\'b3\'be \'bc\'f6 \'c0\'d6\'b4\'c2 \'bc\'b3\'b0\'e8 \'b5\'b5\'b8\'e9\
+- \'b0\'b4\'c3\'bc(object)\'b4\'c2 \'a1\'b0\'b0\'fa\'c0\'da\'c6\'b2\'c0\'bb \'c0\'cc\'bf\'eb\'c7\'d8 \'b8\'b8\'b5\'e7 \'b0\'fa\'c0\'da\'a1\'b1\'bf\'cd \'ba\'f1\'bd\'c1\'c7\'cf\'b4\'d9. : \'c5\'ac\'b7\'a1\'bd\'ba\'b7\'ce \'b8\'b8\'b5\'e7 \'c7\'c7\'c1\'b6\'b9\'b0\
+- \'b0\'b4\'c3\'bc\'bf\'a1\'b4\'c2 \'b0\'b4\'c3\'bc\'b8\'b6\'b4\'d9 \'b0\'ed\'c0\'af\'c7\'d1 \'bc\'ba\'b0\'dd\'c0\'bb \'b0\'a1\'c1\'f8\'b4\'d9\'b4\'c2 \'c1\'df\'bf\'e4\'c7\'d1 \'c6\'af\'c2\'a1\'c0\'cc \'c0\'d6\'b4\'d9. (\'c1\'ef, \'be\'ee\'b6\'b2 \'b0\'fa\'c0\'da\'b8\'a6 \'b1\'fa\'b9\'ae\'b4\'d9\'b0\'ed \'c7\'d8\'bc\'ad \'b4\'d9\'b8\'a5 \'b0\'fa\'c0\'da\'bf\'a1 \'bf\'b5\'c7\'e2\'c0\'bb \'b3\'a2\'c4\'a1\'c1\'f6 \'be\'ca\'b4\'c2\'b4\'d9.)\
+\
+class Cookie:\
+    pass\
+\
+a = Cookie()\
+b = Cookie()\
+\
+
+\f1\b * cf) \'b0\'b4\'c3\'bc\'bf\'cd \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba\'c0\'c7 \'c2\'f7\'c0\'cc
+\f0\b0 \
+- a = Cookie()\'bf\'a1\'bc\'ad \'b8\'b8\'b5\'e7 a\'b4\'c2 \'b0\'b4\'c3\'bc\'c0\'cc\'b4\'d9. a\'b0\'b4\'c3\'bc\'b4\'c2 Cookie\'c0\'c7 \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba\'c0\'cc\'b4\'d9.\
+- \'c0\'a7\'c3\'b3\'b7\'b3 \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba\'b4\'c2 \'c6\'af\'c1\'a4 \'b0\'b4\'c3\'bc\'b0\'a1 \'be\'ee\'b6\'b2 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b0\'b4\'c3\'bc\'c0\'ce\'c1\'f6\'b8\'a6 \'b0\'fc\'b0\'e8 \'c0\'a7\'c1\'d6\'b7\'ce \'bc\'b3\'b8\'ed\'c7\'d2 \'b6\'a7 \'bb\'e7\'bf\'eb\'c7\'d1\'b4\'d9.\
+- \'a1\'aea\'b4\'c2 \'b0\'b4\'c3\'bc\'a1\'af, \'a1\'aea\'b4\'c2 Cookie\'c0\'c7 \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba\'a1\'af O\
+- \'a1\'aea\'b4\'c2 Cookie\'c0\'c7 \'b0\'b4\'c3\'bc\'a1\'af, \'a1\'aea\'b4\'c2 \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba\'a1\'af \'bb\'ec\'c2\'a6 \'be\'ee\'bb\'f6\
+\
+
+\f1\b \ul ** \'bb\'e7\'c4\'a2\'bf\'ac\'bb\'ea \'c5\'ac\'b7\'a1\'bd\'ba \'b8\'b8\'b5\'e9\'b1\'e2
+\f0\b0 \ulnone \
+\
+
+\f1\b * \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'be\'ee\'b6\'bb\'b0\'d4 \'b8\'b8\'b5\'e9\'c1\'f6 \'b8\'d5\'c0\'fa \'b1\'b8\'bb\'f3\'c7\'cf\'b1\'e2
+\f0\b0 \
+- \'b5\'ce \'bc\'fd\'c0\'da \'c0\'d4\'b7\'c2\'b9\'de\'b1\'e2 \'a1\'a6 setdata \'b8\'de\'bc\'ad\'b5\'e5\
+- add, div, sub, mul \'b8\'de\'bc\'ad\'b5\'e5 \'b8\'b8\'b5\'e9\'be\'ee\'be\'df\'b0\'da\'b4\'d9!\
+- a = FourCal()\'b7\'ce \'b0\'b4\'c3\'bc\'b8\'a6 \'b8\'b8\'b5\'e9\'b0\'ed, a.setdate(4,2)\
+	: print(a.add()), print(a.mul()) \'b5\'ee\'c0\'b8\'b7\'ce \'bb\'e7\'bf\'eb\'c7\'cf\'b5\'b5\'b7\'cf!\
+\
+
+\f1\b * \'c5\'ac\'b7\'a1\'bd\'ba \'b1\'b8\'c1\'b6 \'b8\'b8\'b5\'e9\'b1\'e2
+\f0\b0 \
+\
+class FourCal:\
+    pass\
+- \'c0\'cf\'b4\'dc\'c0\'ba \'b0\'b4\'c3\'bc\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'d2 \'bc\'f6 \'c0\'d6\'b5\'b5\'b7\'cf \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'b8\'b8\'b5\'ea\
+- a = FourCal()\'bf\'a1\'bc\'ad a\'c0\'c7 \'c5\'b8\'c0\'d4\'c0\'ba \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba\'b6\'f3\'b0\'ed \'b3\'aa\'bf\'c8\
+\
+
+\f1\b * \'b0\'b4\'c3\'bc\'bf\'a1 \'bc\'fd\'c0\'da \'c1\'f6\'c1\'a4\'c7\'d2 \'bc\'f6 \'c0\'d6\'b0\'d4 \'b8\'b8\'b5\'e9\'b1\'e2
+\f0\b0 \
+- a.setdate(4,2)\'b0\'a1 \'b5\'bf\'c0\'db\'c7\'cf\'b5\'b5\'b7\'cf \'b1\'e2\'b4\'c9 \'c3\'df\'b0\'a1!\
+\
+class FourCal:\
+    def setdata(self, first, second):\
+        self.first = first\
+        self.seconde = second\
+\
+- \'c5\'ac\'b7\'a1\'bd\'ba \'be\'c8\'bf\'a1 \'b1\'b8\'c7\'f6\'b5\'c8 \'c7\'d4\'bc\'f6\'b4\'c2 method\'b6\'f3\'b0\'ed \'ba\'ce\'b8\'a5\'b4\'d9.\
+\
+def \'c7\'d4\'bc\'f6\'c0\'cc\'b8\'a7(\'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6) :\
+	\'bc\'f6\'c7\'e0\'c7\'d2 \'b9\'ae\'c0\'e5\
+	\'a1\'a6\
+>> \'c0\'c7 \'c7\'fc\'c5\'c2!\
+\
+1) setdata \'b8\'de\'bc\'ad\'b5\'e5\'c0\'c7 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\
+- setdata \'b8\'de\'bc\'ad\'b5\'e5\'b4\'c2 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b7\'ce self, first, second 3\'b0\'b3 \'c0\'d4\'b7\'c2\'b0\'aa\'c0\'bb \'b9\'de\'b4\'c2\'b4\'d9\'a1\'a6\
+- \'c0\'cf\'b9\'dd \'c7\'d4\'bc\'f6\'bf\'cd \'b4\'de\'b8\'ae \'b8\'de\'bc\'ad\'b5\'e5\'c0\'c7 \'c3\'b9 \'b9\'f8\'c2\'b0 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6 self\'b4\'c2 \'c6\'af\'ba\'b0\'c7\'d1 \'c0\'c7\'b9\'cc\'b8\'a6 \'b0\'a1\'c1\'f8\'b4\'d9.\
+- \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6 self\'bf\'a1\'b4\'c2 setdata\'b8\'a6 \'c8\'a3\'c3\'e2\'c7\'d1 \'b0\'b4\'c3\'bc a\'b0\'a1 \'c0\'da\'b5\'bf\'c0\'b8\'b7\'ce \'c0\'fc\'b4\'de\'b5\'c8\'b4\'d9!\
+- a.setdata(4,2) >>> self = a, first = 4, second = 2\
+- \'c1\'ef, a = FourCal(), FourCal.setdata(a, 4, 2) \'c0\'cc\'b7\'b1\'bd\'c4\'c0\'b8\'b7\'ce \'c8\'a3\'c3\'e2\'b5\'b5 \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+\
+2) setdata \'b8\'de\'bc\'ad\'b5\'e5\'c0\'c7 \'bc\'f6\'c7\'e0\'b9\'ae\
+- \'c0\'ad \'c2\'f7\'b7\'ca\'b8\'a6 \'b0\'c5\'c4\'a3 \'c8\'c4, self.first = first \'b5\'ee\'c0\'ba \'b4\'d9\'c0\'bd\'b0\'fa \'b0\'b0\'c0\'cc \'c7\'d8\'bc\'ae\'b5\'c8\'b4\'d9.\
+\
+self.first = 4 / self.second = 2\
+- self\'b4\'c2 \'c0\'fc\'b4\'de\'b5\'c8 \'b0\'b4\'c3\'bc a\'c0\'cc\'b9\'c7\'b7\'ce\
+\
+a.first = 4 / a.second = 2\
+- \'c0\'a7 \'b0\'fa\'c1\'a4\'c0\'bb \'c5\'eb\'c7\'d8, a\'b0\'b4\'c3\'bc\'bf\'a1 \'b0\'b4\'c3\'bc\'ba\'af\'bc\'f6 first\'b0\'a1 \'bb\'fd\'bc\'ba\'b5\'c7\'b0\'ed, \'b0\'aa 4\'b0\'a1 \'c0\'fa\'c0\'e5\'b5\'c8\'b4\'d9.\
+\
+print(a.first) >>> 4\
+\
+a = FourCal()\
+b = FourCal()\
+a.setdata(4,2)\
+print(a.first)\
+b.setdata(3,7)\
+print(b.first)\
+- \'c0\'cc\'b7\'b1\'bd\'c4\'c0\'b8\'b7\'ce \'c7\'d8\'b5\'b5 b\'c0\'c7 \'bc\'b3\'c1\'a4\'b5\'c8 first\'bf\'cd second\'b4\'c2 a\'c0\'c7 \'bc\'b3\'c1\'a4\'b5\'c8 \'b0\'aa\'bf\'a1 \'bf\'b5\'c7\'e2\'c0\'bb \'b9\'cc\'c4\'a1\'c1\'f6 \'be\'ca\'b4\'c2\'b4\'d9.\
+- \'c1\'ef \'b4\'d9\'b8\'a5 \'b0\'b4\'c3\'bc\'c0\'c7 \'b0\'b4\'c3\'bc\'ba\'af\'bc\'f6\'bf\'cd \'bb\'f3\'b0\'fc\'be\'f8\'c0\'cc \'b5\'b6\'b8\'b3\'c0\'fb\'c0\'ce \'b0\'aa\'c0\'bb \'c0\'af\'c1\'f6\'c7\'d1\'b4\'d9!\
+- id(a.first) / id(b.first)\'b8\'a6 \'c7\'d8\'ba\'b8\'b8\'e9, \'c1\'d6\'bc\'d2 \'b0\'aa\'c0\'cc \'b4\'d9\'b8\'a5 \'b0\'cd\'c0\'bb \'be\'cb \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+
+\f1\b * \'b4\'f5\'c7\'cf\'b1\'e2 \'b1\'e2\'b4\'c9 \'b8\'b8\'b5\'e9\'b1\'e2
+\f0\b0 \
+print(a.add())\
+- \'b0\'a1 \'c0\'db\'b5\'bf\'c7\'cf\'b5\'b5\'b7\'cf!\
+\
+    def add(self):\
+        result = self.first + self.second\
+        return result\
+- \'b8\'a6 \'c3\'df\'b0\'a1\'c7\'d8\'c1\'d8\'b4\'d9!\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0         result = self.first + self.second\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 - self\'bf\'a1\'b4\'c2 \'b0\'b4\'c3\'bc a\'b0\'a1 \'c0\'d4\'b7\'c2\'b5\'c7\'b9\'c7\'b7\'ce \'c0\'ad \'c4\'da\'b5\'e5\'b4\'c2 result = a.first+a.second\'bf\'cd \'b0\'b0\'b4\'d9.\
+- \'c0\'cc \'b6\'a7 setdata\'bf\'a1 \'c0\'c7\'c7\'d8\'bc\'ad a.first=4, a.second=2\'b0\'a1 \'bc\'b3\'c1\'a4\'b5\'c7\'be\'fa\'c0\'b8\'b9\'c7\'b7\'ce result = 4+2\'bf\'cd \'b0\'b0\'b4\'d9.\
+\
+
+\f1\b * \'b0\'f6\'c7\'cf\'b1\'e2/\'bb\'a9\'b1\'e2/\'b3\'aa\'b4\'a9\'b1\'e2 \'b1\'e2\'b4\'c9 \'b8\'b8\'b5\'e9\'b1\'e2
+\f0\b0 \
+class FourCal:\
+    def setdata(self, first, second):\
+        self.first = first\
+        self.second = second\
+\
+    def add(self):\
+        result = self.first + self.second\
+        return result\
+\
+    def sub(self):\
+        result = self.first - self.second\
+        return result\
+\
+    def mul(self):\
+        result = self.first * self.second\
+        return result\
+\
+    def div(self):\
+        result = self.first / self.second\
+        return result\
+\
+a = FourCal()\
+a.setdata(4,2)\
+print(a.add())\
+print(a.sub())\
+print(a.mul())\
+print(a.div())\
+- \'c0\'df \'c0\'db\'b5\'bf\'c7\'d4!\
+\
+
+\f1\b \ul ** \'bb\'fd\'bc\'ba\'c0\'da (Constructor)
+\f0\b0 \ulnone \
+- \'b8\'b8\'be\'e0 \'c0\'a7 \'c4\'da\'b5\'e5\'bf\'a1\'bc\'ad, setdata\'b8\'a6 \'c7\'d8\'c1\'d6\'c1\'f6 \'be\'ca\'b0\'ed add\'b5\'ee\'c0\'bb \'c7\'cf\'b7\'c1 \'c7\'cf\'b8\'e9 \'bf\'c0\'b7\'f9\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'d1\'b4\'d9. : self.first, self.second\'b0\'a1 \'c1\'a4\'c0\'c7\'b5\'c7\'c1\'f6 \'be\'ca\'b1\'e2 \'b6\'a7\'b9\'ae\'c0\'cc\'b4\'d9.\
+- \'c0\'a7\'bf\'cd \'b0\'b0\'c0\'ba \'bf\'c0\'b7\'f9\'b8\'a6 \'c1\'a6\'b0\'c5 \'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d8 \'bf\'ec\'b8\'ae\'b4\'c2 \'c3\'ca\'b1\'e2\'b0\'aa\'c0\'bb \'bc\'b3\'c1\'a4\'c7\'d8\'c1\'d9 \'c7\'ca\'bf\'e4\'b0\'a1 \'c0\'d6\'b4\'d9.\
+- \'bb\'fd\'bc\'ba\'c0\'da : \'b0\'b4\'c3\'bc\'b0\'a1 \'bb\'fd\'bc\'ba\'b5\'c9 \'b6\'a7 \'c0\'da\'b5\'bf\'c0\'b8\'b7\'ce \'c8\'a3\'c3\'e2\'b5\'c7\'b4\'c2 \'b8\'de\'bc\'ad\'b5\'e5\'b8\'a6 \'c0\'c7\'b9\'cc\'c7\'d1\'b4\'d9.\
+	: python\'bf\'a1\'bc\'ad\'b4\'c2 __init__\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9, \'c0\'cc \'b8\'de\'bc\'ad\'b5\'e5\'b4\'c2 \'bb\'fd\'bc\'ba\'c0\'da\'b0\'a1 \'b5\'c8\'b4\'d9.\
+\
+    def __init__(self,first,second):\
+        self.first = first\
+        self.second = second\
+- \'c0\'a7\'c3\'b3\'b7\'b3 \'bc\'b3\'c1\'a4\'c7\'d8\'c1\'d8\'b4\'d9.\
+\
+a = FourCal() >> error\
+- \'c0\'cc\'c8\'c4 \'c0\'a7\'c3\'b3\'b7\'b3 \'c7\'cf\'b4\'c2 \'b9\'e6\'bd\'c4\'c0\'ba \'bf\'a1\'b7\'af\'b7\'ce \'b9\'d9\'b2\'ee\'b0\'d4 \'b5\'c8\'b4\'d9.\
+- \'b1\'d7 \'c0\'cc\'c0\'af\'b4\'c2 \'b0\'b4\'c3\'bc\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'d2 \'b6\'a7 \'bb\'fd\'bc\'ba\'c0\'da __init__\'c0\'cc \'c8\'a3\'c3\'e2\'b5\'c7\'be\'ee, \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6 frist\'bf\'cd second\'bf\'a1 \'c7\'d8\'b4\'e7\'c7\'cf\'b4\'c2 \'b0\'aa\'c0\'cc \'c0\'fc\'b4\'de\'b5\'c7\'c1\'f6 \'be\'ca\'be\'d2\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1 \'b9\'df\'bb\'fd\'c7\'d1\'b4\'d9.\
+\
+a = FourCal(4,2)\
+- \'c0\'a7\'bf\'cd \'b0\'b0\'c0\'ba \'b0\'b4\'c3\'bc \'bb\'fd\'bc\'ba\'c0\'bb \'c5\'eb\'c7\'cf\'bf\'a9 \'bf\'c0\'b7\'f9\'b8\'a6 \'be\'f8\'be\'d9 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+print(a.second) >>> 2\
+\
+
+\f1\b \ul ** \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'bb\'f3\'bc\'d3 (Inheritance)
+\f0\b0 \ulnone \
+- \'be\'ee\'b6\'b2 \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'b8\'b8\'b5\'e9 \'b6\'a7, \'b4\'d9\'b8\'a5 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b1\'e2\'b4\'c9\'c0\'bb \'b9\'b0\'b7\'c1\'b9\'de\'c0\'bb \'bc\'f6 \'c0\'d6\'b0\'d4 \'b8\'b8\'b5\'e5\'b4\'c2 \'b0\'cd\
+- \'bc\'f6\'c1\'a4\'c7\'cf\'b8\'e9 \'b5\'c7\'b4\'c2\'b5\'a5 \'bf\'d6 \'b1\'bb\'c0\'cc \'bb\'f3\'bc\'d3\'c0\'bb ? : \'bf\'f8\'b7\'a1\'c0\'c7 \'c5\'ac\'b7\'a1\'bd\'ba\'b0\'a1 \'b6\'f3\'c0\'cc\'ba\'ea\'b7\'af\'b8\'ae\'c7\'fc\'c5\'c2\'b7\'ce \'c1\'a6\'b0\'f8\'b5\'c7\'b0\'c5\'b3\'aa, \'bc\'f6\'c1\'a4\'c0\'cc \'c7\'e3\'bf\'eb\'b5\'c7\'c1\'f6 \'be\'ca\'b4\'c2 \'bb\'f3\'c8\'b2\'c0\'cf \'b6\'a7!\
+\
+- class \'c5\'ac\'b7\'a1\'bd\'ba \'c0\'cc\'b8\'a7 (\'bb\'f3\'bc\'d3\'c7\'d2 \'c5\'ac\'b7\'a1\'bd\'ba \'c0\'cc\'b8\'a7) :\
+\
+(FourCal\'bf\'a1 \'c1\'a6\'b0\'f6\'b1\'e2\'b4\'c9\'c0\'bb \'c3\'df\'b0\'a1\'c7\'d1 MoreFourCal \'b0\'e8\'bb\'ea\'b1\'e2 \'b8\'b8\'b5\'e9\'b1\'e2)\
+class MoreFourCal(FourCal):\
+    def pow(self):\
+        result = self.first ** self.second\
+        return result\
+- MoreFourCal\'c0\'bb \'c5\'eb\'c7\'d8 \'b0\'b4\'c3\'bc\'b8\'a6 \'b8\'b8\'b5\'e9\'be\'ee\'c1\'d6\'b8\'e9, \'bb\'f3\'bc\'d3\'b9\'de\'c0\'ba FourCal\'c0\'c7 \'b8\'f0\'b5\'e7 \'b1\'e2\'b4\'c9\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9\'bc\'ad, \'c3\'df\'b0\'a1\'b5\'c8 \'b1\'e2\'b4\'c9\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+a = MoreFourCal (4,2)\
+a.add()\
+a.sub()\
+a.mul()\
+a.div()\
+a.pow()\
+>> \'b8\'f0\'b5\'ce \'c0\'df \'c0\'db\'b5\'bf!\
+\
+
+\f1\b * \'b8\'de\'bc\'ad\'b5\'e5 \'bf\'c0\'b9\'f6\'b6\'f3\'c0\'cc\'b5\'f9
+\f0\b0 \
+- div\'bf\'a1\'bc\'ad 0\'c0\'b8\'b7\'ce \'b3\'aa\'b4\'a9\'b8\'e9 error\'b0\'a1 \'be\'c6\'b4\'d1 0\'c0\'cc \'c3\'e2\'b7\'c2\'b5\'c7\'b5\'b5\'b7\'cf \'c7\'cf\'b7\'c1\'b8\'e9?\
+\
+class SafeFourCal(FourCal):\
+    def div(self):\
+        if self.second == 0:\
+            return 0\
+        else :\
+            return self.first / self.second\
+- \'c0\'a7\'c3\'b3\'b7\'b3, \'ba\'ce\'b8\'f0 \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1 \'c0\'d6\'b4\'c2 \'b8\'de\'bc\'ad\'b5\'e5\'b8\'a6 \'b5\'bf\'c0\'cf \'c7\'d1 \'c0\'cc\'b8\'a7\'c0\'b8\'b7\'ce \'c0\'da\'bd\'c4 \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1\'bc\'ad \'b8\'de\'bc\'ad\'b5\'e5\'b8\'a6 \'b8\'b8\'b5\'e9\'be\'ee\'c1\'d8\'b4\'d9\'b8\'e9, \'ba\'ce\'b8\'f0\'b8\'de\'bc\'ad\'b5\'e5\'c0\'c7 \'b8\'de\'bc\'ad\'b5\'e5\'b8\'a6 \'b5\'a4\'be\'ee\'be\'b2\'b1\'e2\'b0\'a1 \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+- \'c0\'cc\'b8\'a6 \'b8\'de\'bc\'ad\'b5\'e5 \'bf\'c0\'b9\'f6\'b6\'f3\'c0\'cc\'b5\'f9(Overriding, \'b5\'a4\'be\'ee\'be\'b2\'b1\'e2)\'c0\'cc\'b6\'f3\'b0\'ed \'c7\'d1\'b4\'d9.\
+\
+
+\f1\b \ul ** \'c5\'ac\'b7\'a1\'bd\'ba \'ba\'af\'bc\'f6
+\f0\b0 \ulnone \
+- \'b0\'b4\'c3\'bc\'ba\'af\'bc\'f6\'b4\'c2 \'b4\'d9\'b8\'a5 \'b0\'b4\'c3\'bc\'b5\'e9\'bf\'a1 \'bf\'b5\'c7\'e2\'b9\'de\'c1\'f6 \'be\'ca\'b0\'ed \'b1\'d7 \'b0\'aa\'c0\'bb \'c0\'af\'c1\'f6\'c7\'d1\'b4\'d9.\
+- \'c5\'ac\'b7\'a1\'bd\'ba\'ba\'af\'bc\'f6\'b4\'c2 \'bc\'ba\'b0\'dd\'c0\'cc \'b4\'d9\'b8\'a7!\
+\
+class Family:\
+    lastname = "\'b1\'e8"\
+\
+print(Family.lastname)\
+>>> \'b1\'e8\
+\
+a=Family()\
+b=Family()\
+print(a.lastname) >> \'b1\'e8\
+print(b.lastname) >> \'b1\'e8\
+\
+Family.lastname = "\'c0\'cc"\
+print(a.lastname) >> \'c0\'cc\
+print(b.lastname) >> \'c0\'cc\
+\
+- Family \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1 \'bc\'b1\'be\'f0\'c7\'d1 lastname\'c0\'cc \'b9\'d9\'b7\'ce \'c5\'ac\'b7\'a1\'bd\'ba \'ba\'af\'bc\'f6\'c0\'cc\'b4\'d9.\
+- Family.lastname\'c0\'b8\'b7\'ce \'c8\'a3\'c3\'e2 \'b0\'a1\'b4\'c9\'c7\'cf\'b0\'ed, \'bf\'aa\'bd\'c3 \'b0\'b4\'c3\'bc\'b8\'a6 \'b8\'b8\'b5\'e9\'be\'ee \'c8\'a3\'c3\'e2\'c7\'d8\'c1\'d9 \'bc\'f6\'b5\'b5 \'c0\'d6\'b4\'d9.\
+- \'b4\'d9\'b8\'b8 \'c0\'cc\'b6\'a7, \'b0\'b4\'c3\'bc\'bf\'cd \'b4\'de\'b8\'ae \'c5\'ac\'b7\'a1\'bd\'ba \'ba\'af\'bc\'f6 \'b0\'aa\'c0\'bb \'b9\'d9\'b2\'e3\'c1\'d8\'b4\'d9\'b8\'e9, \'c5\'ac\'b7\'a1\'bd\'ba\'b7\'ce \'b8\'b8\'b5\'e7 \'b0\'b4\'c3\'bc\'c0\'c7 lastname\'b5\'b5 \'b8\'f0\'b5\'ce \'ba\'af\'b0\'e6\'b5\'c7\'b4\'c2 \'b0\'cd\'c0\'bb \'be\'cb \'bc\'f6 \'c0\'d6\'b4\'d9.\
+- id\'b8\'a6 \'c5\'eb\'c7\'d8 \'c8\'ae\'c0\'ce\'c7\'d8\'ba\'b8\'b8\'e9, Family.lastname, a.lastname, b.lastname\'c0\'ba \'b8\'f0\'b5\'ce \'b0\'b0\'c0\'ba \'b8\'de\'b8\'f0\'b8\'ae\'b8\'a6 \'b0\'a1\'b8\'a3\'c5\'b0\'b0\'ed \'c0\'d6\'b4\'d9.\
+\
+- \'c1\'ef \'c5\'ac\'b7\'a1\'bd\'ba \'ba\'af\'bc\'f6\'b4\'c2 \'c5\'ac\'b7\'a1\'bd\'ba\'b7\'ce \'b8\'b8\'b5\'e7 \'b8\'f0\'b5\'e7 \'b0\'b4\'c3\'bc\'bf\'a1 \'b0\'f8\'c0\'af\'b5\'c8\'b4\'d9!\
+\
+\
+\
+\
+}

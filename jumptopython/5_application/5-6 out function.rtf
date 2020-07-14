@@ -1,0 +1,346 @@
+{\rtf1\ansi\ansicpg949\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Regular;\f1\fnil\fcharset129 AppleSDGothicNeo-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11000\viewh19580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs40 \cf0 ch5-6. \'bf\'dc\'c0\'e5\'c7\'d4\'bc\'f6\
+- \'c0\'fc \'bc\'bc\'b0\'e8 \'c6\'c4\'c0\'cc\'bd\'e3 \'bb\'e7\'bf\'eb\'c0\'da\'b5\'e9\'c0\'cc \'b8\'b8\'b5\'e7 \'c0\'af\'bf\'eb\'c7\'d1 \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a5\'c0\'bb \'b8\'f0\'be\'c6 \'b3\'f5\'c0\'ba \'b0\'cd\'c0\'cc \'b9\'d9\'b7\'ce \'c6\'c4\'c0\'cc\'bd\'e3 \'b6\'f3\'c0\'cc\'ba\'ea\'b7\'af\'b8\'ae\'c0\'cc\'b4\'d9.\
+- \'a1\'ae\'b5\'b5\'bc\'ad\'b0\'fc\'a1\'af\'c0\'cc\'b6\'f3\'b4\'c2 \'b6\'e6 \'b1\'d7\'b4\'eb\'b7\'ce, \'bf\'f8\'c7\'cf\'b4\'c2 \'c1\'a4\'ba\'b8\'b8\'a6 \'c3\'a3\'be\'c6\'ba\'b8\'b4\'c2 \'b0\'f7\'c0\'cc\'b4\'d9.\
+- \'b8\'f0\'b5\'e7 \'b6\'f3\'c0\'cc\'ba\'ea\'b7\'af\'b8\'ae\'b8\'a6 \'b4\'d9 \'be\'cb \'c7\'ca\'bf\'e4\'b4\'c2 \'be\'f8\'c1\'f6\'b8\'b8, \'be\'ee\'b6\'b2 \'c0\'cf\'c0\'bb \'c7\'d2 \'b6\'a7 \'be\'ee\'b6\'b2 \'b6\'f3\'c0\'cc\'ba\'ea\'b7\'af\'b8\'ae\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d8\'be\'df \'c7\'d1\'b4\'d9\'b4\'c2 \'c1\'a4\'b5\'b5\'b8\'b8 \'be\'cb\'b8\'e9 \'b5\'c8\'b4\'d9.\
+- \'b6\'c7\'c7\'d1, \'be\'ee\'b6\'b2 \'b6\'f3\'c0\'cc\'ba\'ea\'b7\'af\'b8\'ae\'b0\'a1 \'c1\'b8\'c0\'e7\'c7\'cf\'b0\'ed \'be\'ee\'b6\'bb\'b0\'d4 \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2\'c1\'f6 \'be\'cb\'be\'c6\'be\'df\'b5\'c8\'b4\'d9\'a1\'a6 \'c0\'da\'c1\'d6 \'bb\'e7\'bf\'eb\'b5\'c7\'b0\'ed \'b2\'c0 \'be\'cb\'be\'c6 \'b5\'ce\'b8\'e9 \'c1\'c1\'c0\'ba \'b6\'f3\'c0\'cc\'ba\'ea\'b7\'af\'b8\'ae \'c1\'df\'bd\'c9\'c0\'b8\'b7\'ce \'bb\'ec\'c6\'ec\'ba\'b8\'b1\'e2!\
+\
+
+\f1\b \ul ** sys
+\f0\b0 \ulnone \
+- \'c6\'c4\'c0\'cc\'bd\'e3 \'c0\'ce\'c5\'cd\'c7\'c1\'b8\'ae\'c5\'cd\'b0\'a1 \'c1\'a6\'b0\'f8\'c7\'cf\'b4\'c2 \'ba\'af\'bc\'f6\'bf\'cd \'c7\'d4\'bc\'f6\'b8\'a6 \'c1\'f7\'c1\'a2 \'c1\'a6\'be\'ee\'c7\'d2 \'bc\'f6 \'c0\'d6\'b0\'d4 \'c7\'d8\'c1\'d6\'b4\'c2 \'b8\'f0\'b5\'e2\
+\
+
+\f1\b * \'b8\'ed\'b7\'c9 \'c7\'e0\'bf\'a1\'bc\'ad \'c0\'ce\'bc\'f6 \'c0\'fc\'b4\'de\'c7\'cf\'b1\'e2 - sys.argv
+\f0\b0 \
+import sys\
+print(sys.argv)\
+\
+\'c5\'cd\'b9\'cc\'b3\'ce\'bf\'a1\'bc\'ad\
+python3 5-6.py you need python\
+>>> [\'a1\'ae5-6.py\'a1\'af, \'a1\'aeyou\'a1\'af, \'a1\'aeneed\'a1\'af, \'a1\'aepython\'a1\'af]\
+- python3 \'b8\'ed\'b7\'c9\'be\'ee \'b5\'da\'c0\'c7 \'b8\'f0\'b5\'e7 \'b0\'cd\'b5\'e9\'c0\'cc \'b0\'f8\'b9\'e9\'c0\'bb \'b1\'e2\'c1\'d8\'c0\'b8\'b7\'ce \'b3\'aa\'b4\'b5\'be\'ee sys.argv\'b8\'ae\'bd\'ba\'c6\'ae\'c0\'c7 \'bf\'e4\'bc\'d2\'b0\'a1 \'b5\'c8\'b4\'d9.\
+\
+
+\f1\b * \'b0\'ad\'c1\'a6\'b7\'ce \'bd\'ba\'c5\'a9\'b8\'b3\'c6\'ae \'c1\'be\'b7\'e1\'c7\'cf\'b1\'e2 - sys.exit
+\f0\b0 \
+sys.exit()\
+- ctrl + z, ctrl + d\'b8\'a6 \'b4\'ad\'b7\'af\'bc\'ad \'b4\'eb\'c8\'ad\'c7\'fc \'c0\'ce\'c5\'cd\'c7\'c1\'b8\'ae\'c5\'cd\'b8\'a6 \'c1\'be\'b7\'e1\'c7\'cf\'b4\'c2 \'b0\'cd\'b0\'fa \'b0\'b0\'c0\'ba \'b1\'e2\'b4\'c9\'c0\'bb \'c7\'d1\'b4\'d9.\
+- \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a5 \'c6\'c4\'c0\'cf \'be\'c8\'bf\'a1\'bc\'ad \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9 \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a5\'c0\'bb \'c1\'df\'b4\'dc\'bd\'c3\'c5\'b2\'b4\'d9.\
+\
+
+\f1\b * \'c0\'da\'bd\'c5\'c0\'cc \'b8\'b8\'b5\'e7 \'b8\'f0\'b5\'e2 \'ba\'d2\'b7\'af\'bf\'cd \'bb\'e7\'bf\'eb\'c7\'cf\'b1\'e2 - sys.path
+\f0\b0 \
+- sys.path\'b4\'c2 \'b8\'f0\'b5\'e2\'b5\'e9\'c0\'cc \'c0\'fa\'c0\'e5\'b5\'c7\'be\'ee \'c0\'d6\'b4\'c2 \'c0\'a7\'c4\'a1\'b8\'a6 \'b3\'aa\'c5\'b8\'b3\'bd\'b4\'d9.\
+- \'c1\'ef, \'c0\'cc \'c0\'a7\'c4\'a1\'bf\'a1 \'c0\'d6\'b4\'c2 \'c6\'c4\'c0\'cc\'bd\'e3 \'b8\'f0\'b5\'e2\'c0\'ba \'b0\'e6\'b7\'ce\'bf\'a1 \'bb\'f3\'b0\'fc\'be\'f8\'c0\'cc \'be\'ee\'b5\'f0\'bf\'a1\'bc\'ad\'b3\'aa \'ba\'d2\'b7\'af\'bf\'c3 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+import sys\
+print(sys.path)\
+>>> [\'a1\'ae\'b0\'e6\'b7\'ce\'b5\'e9~~~\'a1\'af,]\
+\
+import sys\
+sys.path.append(\'a1\'b0\'b0\'e6\'b7\'ce\'a1\'b1)\
+- \'c0\'a7\'bf\'cd \'b0\'b0\'c0\'cc \'c7\'d1\'b4\'d9\'b8\'e9, \'b0\'e6\'b7\'ce\'bf\'a1 \'c0\'d6\'b4\'c2 \'c6\'c4\'c0\'cc\'bd\'e3 \'b8\'f0\'b5\'e2\'c0\'bb \'ba\'d2\'b7\'af\'bf\'cd\'bc\'ad \'bb\'e7\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b0\'d4 \'b5\'c8\'b4\'d9.\
+\
+
+\f1\b \ul ** pickle
+\f0\b0 \ulnone \
+- \'b0\'b4\'c3\'bc\'c0\'c7 \'c7\'fc\'c5\'c2\'b8\'a6 \'b1\'d7\'b4\'eb\'b7\'ce \'c0\'af\'c1\'f6\'c7\'cf\'b8\'e9\'bc\'ad \'c6\'c4\'c0\'cf\'bf\'a1 \'c0\'fa\'c0\'e5\'c7\'cf\'b0\'ed \'ba\'d2\'b7\'af\'bf\'c3 \'bc\'f6 \'c0\'d6\'b0\'d4 \'c7\'cf\'b4\'c2 \'b8\'f0\'b5\'e2\'c0\'cc\'b4\'d9.\
+\
+(pickle \'b8\'f0\'b5\'e2\'c0\'c7 dump \'c7\'d4\'bc\'f6\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'bf\'a9, \'b5\'f1\'bc\'c5\'b3\'ca\'b8\'ae \'b0\'b4\'c3\'bc\'c0\'ce data\'b8\'a6 \'b1\'d7\'b4\'eb\'b7\'ce \'c6\'c4\'c0\'cf\'bf\'a1 \'c0\'fa\'c0\'e5\'c7\'cf\'b4\'c2 \'b9\'e6\'b9\'fd)\
+import pickle\
+f = open("test.txt", 'wb')\
+data = \{1:'python', 2:'you need'\}\
+pickle.dump(data,f)\
+f.close()\
+\
+(\'b1\'d7 \'b0\'b4\'c3\'bc\'b8\'a6 \'ba\'d2\'b7\'af\'bf\'c0\'b1\'e2)\
+import pickle\
+f = open("test.txt", 'rb')\
+data = pickle.load(f)\
+print(data)\
+\
+
+\f1\b \ul ** OS
+\f0\b0 \ulnone \
+- \'c8\'af\'b0\'e6 \'ba\'af\'bc\'f6\'b3\'aa \'b5\'f0\'b7\'ba\'c5\'cd\'b8\'ae, \'c6\'c4\'c0\'cf \'b5\'ee\'c0\'c7 OS \'c0\'da\'bf\'f8\'c0\'bb \'c1\'a6\'be\'ee\'c7\'d2 \'bc\'f6 \'c0\'d6\'b0\'d4 \'c7\'d8\'c1\'d6\'b4\'c2 \'b8\'f0\'b5\'e2\'c0\'cc\'b4\'d9.\
+\
+
+\f1\b * \'b3\'bb \'bd\'c3\'bd\'ba\'c5\'db\'c0\'c7 \'c8\'af\'b0\'e6 \'ba\'af\'bc\'f6 \'b0\'aa\'c0\'bb \'be\'cb\'b0\'ed \'bd\'cd\'c0\'bb \'b6\'a7 - os.environ
+\f0\b0 \
+- \'c7\'f6\'c0\'e7 \'bd\'c3\'bd\'ba\'c5\'db\'c0\'c7 \'c8\'af\'b0\'e6 \'ba\'af\'bc\'f6\'b0\'aa\'c0\'bb \'ba\'b8\'bf\'a9\'c1\'d8\'b4\'d9.\
+import os\
+os.environ\
+>> \'b4\'d9\'be\'e7\'c7\'d1 \'c1\'a4\'ba\'b8\'b0\'a1 \'b3\'aa\'bf\'c8!\
+\
+- \'b5\'b9\'b7\'c1\'b9\'de\'c0\'ba \'b0\'b4\'c3\'bc\'b0\'a1 \'b5\'f1\'bc\'c5\'b3\'ca\'b8\'ae\'c0\'cc\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1, \'b4\'d9\'c0\'bd\'b0\'fa \'b0\'b0\'c0\'cc \'c8\'a3\'c3\'e2\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+os.environ[\'a1\'aePATH\'a1\'af]\
+>>> PATH \'c8\'af\'b0\'e6\'ba\'af\'bc\'f6 \'b3\'bb\'bf\'eb\'c0\'cc \'b3\'aa\'bf\'c8\
+\
+
+\f1\b * \'b5\'f0\'b7\'ba\'c5\'cd\'b8\'ae \'c0\'a7\'c4\'a1 \'ba\'af\'b0\'e6\'c7\'cf\'b1\'e2 - os.chdir
+\f0\b0 \
+os.chdir(\'a1\'b0\'b0\'e6\'b7\'ce\'a1\'b1)\
+- \'b4\'d9\'c0\'bd\'b0\'fa \'b0\'b0\'c0\'cc \'c7\'f6\'c0\'e7 \'c0\'a7\'c4\'a1\'b8\'a6 \'ba\'af\'b0\'e6\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+
+\f1\b * \'b5\'f0\'b7\'ba\'c5\'cd\'b8\'ae \'c0\'a7\'c4\'a1 \'b5\'b9\'b7\'c1\'b9\'de\'b1\'e2 - os.getcwd
+\f0\b0 \
+os.getcwd()\
+- \'c7\'f6\'c0\'e7 \'c0\'a7\'c4\'a1\'b8\'a6 \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+\
+
+\f1\b * \'bd\'c3\'bd\'ba\'c5\'db \'b8\'ed\'b7\'c9\'be\'ee \'c8\'a3\'c3\'e2\'c7\'cf\'b1\'e2 - os.system
+\f0\b0 \
+os.system(\'a1\'b0\'b8\'ed\'b7\'c9\'be\'ee\'a1\'b1)\
+- ls, dir \'b0\'b0\'c0\'ba \'b5\'b5\'bd\'ba \'b8\'ed\'b7\'c9\'be\'ee\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+
+\f1\b * \'bd\'c7\'c7\'e0\'c7\'d1 \'bd\'c3\'bd\'ba\'c5\'db \'b8\'ed\'b7\'c9\'be\'ee\'c0\'c7 \'b0\'e1\'b0\'fa\'b0\'aa \'b5\'b9\'b7\'c1\'b9\'de\'b1\'e2 - os.popen
+\f0\b0 \
+f = os.popen(\'a1\'b0ls\'a1\'b1)\
+print(f.read())\
+>>> \'bd\'c7\'c7\'e0\'c7\'d1 \'b0\'e1\'b0\'fa\'b0\'aa\'c0\'bb \'c0\'d0\'b1\'e2 \'b8\'f0\'b5\'e5 \'c7\'fc\'c5\'c2\'c0\'c7 \'c6\'c4\'c0\'cf \'b0\'b4\'c3\'bc\'b7\'ce \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+\
+
+\f1\b * \'b1\'e2\'c5\'b8 \'c0\'af\'bf\'eb\'c7\'d1 os \'b0\'fc\'b7\'c3 \'c7\'d4\'bc\'f6
+\f0\b0 \
+os.mkdir(\'b5\'f0\'b7\'ba\'c5\'cd\'b8\'ae) : \'b5\'f0\'b7\'ba\'c5\'cd\'b8\'ae\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'d1\'b4\'d9.\
+os.rmdir(\'b5\'f0\'b7\'ba\'c5\'cd\'b8\'ae) : \'b5\'f0\'b7\'ba\'c5\'cd\'b8\'ae\'b8\'a6 \'bb\'e8\'c1\'a6\'c7\'d1\'b4\'d9. (\'ba\'f1\'be\'ee\'c0\'d6\'be\'ee\'be\'df \'bb\'e8\'c1\'a6\'b0\'a1\'b4\'c9)\
+os.unlink(\'c6\'c4\'c0\'cf \'c0\'cc\'b8\'a7) : \'c6\'c4\'c0\'cf\'c0\'bb \'c1\'f6\'bf\'ee\'b4\'d9.\
+os.rename(src, dst) : src \'b6\'f3\'b4\'c2 \'c0\'cc\'b8\'a7\'c0\'c7 \'c6\'c4\'c0\'cf\'c0\'bb dst\'b6\'f3\'b4\'c2 \'c0\'cc\'b8\'a7\'c0\'b8\'b7\'ce \'b9\'d9\'b2\'db\'b4\'d9.\
+\
+
+\f1\b \ul ** shutil
+\f0\b0 \ulnone \
+- \'c6\'c4\'c0\'cf\'c0\'bb \'ba\'b9\'bb\'e7\'c7\'d8\'c1\'d6\'b4\'c2 \'c6\'c4\'c0\'cc\'bd\'e3 \'b8\'f0\'b5\'e2\
+\
+import shutil\
+shutil.copy(\'a1\'b0src.txt\'a1\'b1, \'a1\'b0dst.txt\'a1\'b1)\
+- src\'b6\'f3\'b4\'c2 \'c0\'cc\'b8\'a7\'c0\'c7 \'c6\'c4\'c0\'cf\'c0\'bb dst\'b7\'ce \'ba\'b9\'bb\'e7\'c7\'d1\'b4\'d9.\
+\
+
+\f1\b \ul ** glob
+\f0\b0 \ulnone \
+- \'c6\'c4\'c0\'cf \'c0\'cc\'b8\'a7\'c0\'bb \'be\'cb\'be\'c6\'be\'df\'c7\'d2 \'b6\'a7 \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'b8\'f0\'b5\'e2\
+\
+
+\f1\b * \'b5\'f0\'b7\'ba\'c5\'cd\'b8\'ae\'bf\'a1 \'c0\'d6\'b4\'c2 \'c6\'c4\'c0\'cf\'b5\'e9\'c0\'bb \'b8\'ae\'bd\'ba\'c6\'ae\'b7\'ce \'b8\'b8\'b5\'e9\'b1\'e2 - glob(pathname)
+\f0\b0 \
+- \'b5\'f0\'b7\'ba\'c5\'cd\'b8\'ae \'be\'c8\'bf\'a1 \'c6\'c4\'c0\'cf\'b5\'e9\'c0\'bb \'c0\'d0\'be\'ee\'bc\'ad \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+- *, ?\'b5\'ee\'c0\'c7 \'b8\'de\'c5\'b8 \'b9\'ae\'c0\'da\'b8\'a6 \'bd\'e1\'bc\'ad \'bf\'f8\'c7\'cf\'b4\'c2 \'c6\'c4\'c0\'cf\'b8\'b8 \'c0\'d0\'be\'ee \'b5\'e9\'c0\'cf \'bc\'f6\'b5\'b5 \'c0\'d6\'b4\'d9.\
+\
+import glob\
+glob.glob(\'a1\'b0\'b0\'e6\'b7\'ce/\'c6\'c4\'c0\'cf\'b8\'ed\'a1\'b1)\
+>>> [\'a1\'ae\'b0\'e6\'b7\'ce/\'c6\'c4\'c0\'cf\'b8\'ed\'a1\'af, \'a1\'ae\'b0\'e6\'b7\'ce/\'c6\'c4\'c0\'cf\'b8\'ed\'a1\'af, \'a1\'a6 ]\
+\
+
+\f1\b \ul ** tempfile
+\f0\b0 \ulnone \
+- \'c6\'c4\'c0\'cf\'c0\'bb \'c0\'d3\'bd\'c3\'b7\'ce \'b8\'b8\'b5\'e9\'be\'ee\'bc\'ad \'bb\'e7\'bf\'eb\'c7\'d2 \'b6\'a7!\
+- tempfile.mktemp()\'b4\'c2 \'c1\'df\'ba\'b9\'b5\'c7\'c1\'f6 \'be\'ca\'b4\'c2 \'c0\'d3\'bd\'c3 \'c6\'c4\'c0\'cf\'c0\'c7 \'c0\'cc\'b8\'a7\'c0\'bb \'b9\'ab\'c0\'db\'c0\'a7\'b7\'ce \'b8\'b8\'b5\'e9\'be\'ee \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+\
+import tempfile\
+filename = tempfile.mktemp()\
+filename\
+>>> ~~~~~~~~\
+\
+-tempfile.TemporaryFile()\'c0\'ba \'c0\'d3\'bd\'c3 \'c0\'fa\'c0\'e5 \'b0\'f8\'b0\'a3\'c0\'b8\'b7\'ce \'bb\'e7\'bf\'eb\'c7\'d2 \'c6\'c4\'c0\'cf \'b0\'b4\'c3\'bc\'b8\'a6 \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9. \'b1\'e2\'ba\'bb\'c0\'fb\'c0\'b8\'b7\'ce \'b9\'d9\'c0\'cc\'b3\'ca\'b8\'ae\'be\'b2\'b1\'e2\'b8\'f0\'b5\'e5 (wb)\'b8\'a6 \'b0\'ae\'b4\'c2\'b4\'d9.\
+- f.close()\'b8\'a6 \'c7\'cf\'b8\'e9 \'c0\'da\'b5\'bf\'c0\'b8\'b7\'ce \'bb\'e7\'b6\'f3\'c1\'f8\'b4\'d9.\
+\
+
+\f1\b \ul ** time
+\f0\b0 \ulnone \
+- \'bd\'c3\'b0\'a3\'b0\'fa \'b0\'fc\'b7\'c3\'b5\'c8 \'b8\'f0\'b5\'e2.. \'c7\'d4\'bc\'f6\'b0\'a1 \'b1\'b2\'c0\'e5\'c8\'f7 \'b8\'b9\'c0\'bd!\
+\
+
+\f1\b * time.time
+\f0\b0 \
+- \'c7\'f6\'c0\'e7 \'bd\'c3\'b0\'a3\'c0\'bb \'bd\'c7\'bc\'f6 \'c7\'fc\'c5\'c2\'b7\'ce \'b5\'b9\'b7\'c1\'c1\'d6\'b4\'c2 \'c7\'d4\'bc\'f6.\
+- 1970\'b3\'e2 \'b1\'e2\'c1\'d8\'c0\'b8\'b7\'ce \'c1\'f6\'b3\'ad \'bd\'c3\'b0\'a3\'c0\'bb \'c3\'ca \'b4\'dc\'c0\'a7\'b7\'ce \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+time.time()\
+>>>12423523.1234234\
+\
+
+\f1\b * time.localtime
+\f0\b0 \
+- time.time()\'c0\'cc \'b5\'b9\'b7\'c1\'c1\'d8 \'bd\'c7\'bc\'f6 \'b0\'aa\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d8\'bc\'ad, \'bf\'ac\'b5\'b5, \'bf\'f9, \'c0\'cf, \'bd\'c3 , \'ba\'d0, \'c3\'ca\'c0\'c7 \'c7\'fc\'c5\'c2\'b7\'ce \'b9\'d9\'b2\'d9\'be\'ee \'c1\'d6\'b4\'c2 \'c7\'d4\'bc\'f6\'c0\'cc\'b4\'d9.\
+time.localtime(time.time())\
+>>> (\'bf\'ac\'b5\'b5, \'bf\'f9~~ \'b5\'ee\'b5\'ee)\
+\
+
+\f1\b * time.asctime
+\f0\b0 \
+- time.localtime\'bf\'a1 \'c0\'c7\'c7\'d8\'bc\'ad \'b9\'dd\'c8\'af\'b5\'c8 \'c6\'a9\'c7\'c3 \'c7\'fc\'c5\'c2\'c0\'c7 \'b0\'aa\'c0\'bb \'c0\'ce\'bc\'f6\'b7\'ce \'b9\'de\'be\'c6\'bc\'ad, \'b3\'af\'c2\'a5\'bf\'cd \'bd\'c3\'b0\'a3\'c0\'bb \'be\'cb\'be\'c6\'ba\'b8\'b1\'e2 \'bd\'ac\'bf\'ee \'c7\'fc\'c5\'c2\'b7\'ce \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+time.asctime(time.localtime(time.time()))\
+>>> Fri Feb 21 18:36:56 2020\
+\
+
+\f1\b * time.ctime
+\f0\b0 \
+- \'c0\'ad \'c4\'da\'b5\'e5\'b8\'a6 \'c1\'b6\'b1\'dd\'b4\'f5 \'b0\'a3\'c6\'ed\'c7\'cf\'b0\'d4 \'bb\'e7\'bf\'eb\'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+- \'b4\'d9\'b8\'b8, \'c7\'f6\'c0\'e7\'bd\'c3\'b0\'a3\'b8\'b8 \'bb\'e7\'bf\'eb \'b0\'a1\'b4\'c9\'c7\'cf\'b4\'d9.\
+time.ctime()\
+>>> Fri Feb 21 18:36:56 2020\
+\
+
+\f1\b * time.strftime
+\f0\b0 \
+time.strftime(\'a1\'ae\'c3\'e2\'b7\'c2\'c7\'d2 \'c7\'fc\'bd\'c4 \'c6\'f7\'b8\'cb \'c4\'da\'b5\'e5\'a1\'af, time.localtime(time.time()))\
+- \'bd\'c3\'b0\'a3\'bf\'a1 \'b0\'fc\'b0\'e8\'b5\'c8 \'b0\'cd\'c0\'bb \'bc\'bc\'b9\'d0\'c7\'cf\'b0\'d4 \'c7\'a5\'c7\'f6\'c7\'cf\'b4\'c2 \'bf\'a9\'b7\'af\'b0\'a1\'c1\'f6 \'c6\'f7\'b8\'cb \'c4\'da\'b5\'e5\'b8\'a6 \'c1\'a6\'b0\'f8\'c7\'d1\'b4\'d9.\
+- 254p \'b6\'c7\'b4\'c2 \'b1\'b8\'b1\'db\'b8\'b5!\
+\
+import time\
+time.strftime(\'a1\'ae%x\'a1\'af, time.localtime(time.time()))\
+>>> 05/01/01\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 time.strftime(\'a1\'ae%c\'a1\'af, time.localtime(time.time()))\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 >>> Fri Feb 21 18:36:25 2020\
+\
+
+\f1\b * time.sleep
+\f0\b0 \
+- \'c1\'d6\'b7\'ce \'b7\'e7\'c7\'c1 \'be\'c8\'bf\'a1\'bc\'ad \'b8\'b9\'c0\'cc \'bb\'e7\'bf\'eb\'a1\'a6 \'c0\'cf\'c1\'a4\'c7\'d1 \'bd\'c3\'b0\'a3 \'b0\'a3\'b0\'dd\'c0\'bb \'b5\'ce\'b0\'ed \'b7\'e7\'c7\'c1\'b8\'a6 \'bd\'c7\'c7\'e0\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9.\
+\
+import time\
+for i in range(10):\
+    print(i)\
+    time.sleep(1)\
+>>> 1\'c3\'ca\'b0\'a3\'b0\'dd\'c0\'b8\'b7\'ce \'bc\'fd\'c0\'da \'c3\'e2\'b7\'c2\
+\
+
+\f1\b \ul ** calendar
+\f0\b0 \ulnone \
+- \'c6\'c4\'c0\'cc\'bd\'e3\'bf\'a1\'bc\'ad \'b4\'de\'b7\'c2\'c0\'bb \'ba\'bc \'bc\'f6 \'c0\'d6\'b0\'d4 \'c7\'d8\'c1\'d6\'b4\'c2 \'b8\'f0\'b5\'e2\
+- calendar.calendar(\'bf\'ac\'b5\'b5) = calendar.prcal(\'bf\'ac\'b5\'b5)\
+\
+import calendar\
+print(calendar.calendar(2020))\
+>>> 2020 \'b4\'de\'b7\'c2\
+\
+import calendar\
+print(calendar.prmonth(2020, 12))\
+>>> 2020\'b3\'e2 12\'bf\'f9 \'b4\'de\'b7\'c2\
+\
+
+\f1\b * calendar.weekday
+\f0\b0 \
+- weekday(\'bf\'ac\'b5\'b5, \'bf\'f9, \'c0\'cf) : \'b1\'d7 \'b3\'af\'c2\'a5\'bf\'a1 \'c7\'d8\'b4\'e7\'c7\'cf\'b4\'c2 \'bf\'e4\'c0\'cf \'c1\'a4\'ba\'b8\'b8\'a6 \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+- \'bf\'f9\'bf\'e4\'c0\'cf : 0 \'ba\'ce\'c5\'cd ~ \'c0\'cf\'bf\'e4\'c0\'cf : 6 \'b1\'ee\'c1\'f6\
+\
+import calendar\
+print(calendar.weekday(2020, 2, 2))\
+>>> 6\
+\
+
+\f1\b * calendar.monthrange
+\f0\b0 \
+- \'c0\'d4\'b7\'c2\'b9\'de\'c0\'ba \'b4\'de\'c0\'c7 1\'c0\'cf\'c0\'cc \'b9\'ab\'bd\'bc \'bf\'e4\'c0\'cf\'c0\'ce\'c1\'f6, \'b1\'d7 \'b4\'de\'c0\'cc \'b8\'e7\'c4\'a5\'b1\'ee\'c1\'f6 \'c0\'d6\'b4\'c2\'c1\'f6\'b8\'a6 \'c6\'a9\'c7\'c3\'c7\'fc\'c5\'c2\'b7\'ce \'ba\'b8\'bf\'a9\'c1\'d8\'b4\'d9.\
+import calendar\
+print(calendar.monthrange(2020,2))\
+>>> (5, 29)\
+\
+
+\f1\b \ul ** random
+\f0\b0 \ulnone \
+- \'b3\'ad\'bc\'f6\'b8\'a6 \'b9\'df\'bb\'fd\'bd\'c3\'c5\'b0\'b4\'c2 \'b8\'f0\'b5\'a8\
+import random\
+random.random()\
+>>> 0.0~1.0 \'bb\'e7\'c0\'cc\'c0\'c7 \'bd\'c7\'bc\'f6 \'c1\'df\'bf\'a1\'bc\'ad \'b3\'ad\'bc\'f6 \'b0\'aa\'c0\'bb \'b5\'b9\'b7\'c1\'c1\'dc\
+\
+random.randint(1,10)\
+>>> 1~10\'bb\'e7\'c0\'cc\'c0\'c7 int \'c1\'df \'b3\'ad\'bc\'f6 \'b0\'aa\'c0\'bb \'b5\'b9\'b7\'c1\'c1\'dc\
+\
+random.randint(1,55)\
+>>> 1~55\'bb\'e7\'c0\'cc\
+\
+import random\
+def random_pop(data):\
+    number = random.randint(0, len(data)-1)\
+    return data.pop(number)\
+\
+if __name__ == "__main__":\
+    data = [1, 2, 3, 4, 5]\
+    while data:\
+        print(random_pop(data))\
+- \'b8\'ae\'bd\'ba\'c6\'ae\'c0\'c7 \'bf\'e4\'bc\'d2 \'c1\'df\'bf\'a1\'bc\'ad \'b9\'ab\'c0\'db\'c0\'a7\'b7\'ce \'c7\'cf\'b3\'aa\'b8\'a6 \'bc\'b1\'c5\'c3\'c7\'cf\'bf\'a9 \'b2\'a8\'b3\'bd \'b5\'da, \'b0\'aa\'c0\'bb \'b5\'b9\'b7\'c1\'c1\'dc, pop\'bf\'a1 \'c0\'c7\'c7\'d8\'bc\'ad \'bb\'e7\'b6\'f3\'c1\'fc\
+\
+def random_pop(data):\
+    number = random.choice(data)\
+    data.remove(number)\
+    return number\
+- random.choice(data)\'b4\'c2 \'c0\'d4\'b7\'c2\'b9\'de\'c0\'ba \'b8\'ae\'bd\'ba\'c6\'ae\'bf\'a1\'bc\'ad \'b9\'ab\'c0\'db\'c0\'a7\'b7\'ce \'c7\'cf\'b3\'aa\'b8\'a6 \'bc\'b1\'c5\'c3\'c7\'cf\'bf\'a9 \'b5\'b9\'b7\'c1\'c1\'d8\'b4\'d9.\
+\
+- \'b8\'ae\'bd\'ba\'c6\'ae\'c0\'c7 \'c7\'d7\'b8\'f1\'c0\'bb \'b9\'ab\'c0\'db\'c0\'a7\'b7\'ce \'bc\'af\'b0\'ed \'bd\'cd\'c0\'bb \'b6\'a7\'b4\'c2\
+random.shuffle(data)\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9 \'b5\'c8\'b4\'d9.\
+\
+
+\f1\b \ul ** webbrowser
+\f0\b0 \ulnone \
+- \'c0\'da\'bd\'c5\'c0\'c7 \'bd\'c3\'bd\'ba\'c5\'db\'bf\'a1\'bc\'ad \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'b1\'e2\'ba\'bb \'c0\'a5 \'ba\'ea\'b6\'f3\'bf\'ec\'c0\'fa\'b8\'a6 \'c0\'da\'b5\'bf\'c0\'b8\'b7\'ce \'bd\'c7\'c7\'e0\'c7\'cf\'b4\'c2 \'b8\'f0\'b5\'e2\
+\
+import webbrowser\
+webbrowser.open("http://google.com")\
+>>> safari\'b7\'ce google \'bd\'c7\'c7\'e0\'b5\'ca\
+\
+webbrowser.open_new("http://google.com")\
+>>> \'bb\'f5\'b7\'ce\'bf\'ee \'c3\'a2\'c0\'b8\'b7\'ce \'c7\'d8\'b4\'e7 \'c1\'d6\'bc\'d2\'b0\'a1 \'bf\'ad\'b8\'b2\
+\
+
+\f1\b \ul ** \'bd\'ba\'b7\'b9\'b5\'e5\'b8\'a6 \'b4\'d9\'b7\'e7\'b4\'c2 threading \'b8\'f0\'b5\'e2
+\f0\b0 \ulnone \
+- \'c3\'ca\'ba\'b8 \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a1\'b8\'d3\'b0\'a1 \'b1\'b8\'c7\'f6\'c7\'cf\'b1\'e2\'b4\'c2 \'b8\'c5\'bf\'ec \'be\'ee\'b7\'c6\'b4\'d9..\
+- \'b4\'ab\'c0\'b8\'b7\'ce \'bb\'ec\'c6\'ec\'ba\'b8\'b0\'ed \'b3\'d1\'b1\'e2\'b1\'e2!\
+\
+import time\
+\
+def long_task():\
+    for i in range(5):\
+        time.sleep(1)\
+        print("working:%d\\n" % (int(i)+1))\
+\
+print("Start")\
+\
+for i in range(5):\
+    print("%d WORK\\n" % (int(i)+1))\
+    long_task()\
+\
+print("End")\
+>>> 25\'c3\'ca \'bc\'d2\'bf\'e4\'a1\'a6\
+\
+import time\
+import threading\
+\
+def long_task():\
+    for i in range(5):\
+        time.sleep(1)\
+        print("working:%d\\n" % (int(i)+1))\
+\
+print("Start")\
+\
+threads = []\
+for i in range(5):\
+    t = threading.Thread(target=long_task)\
+    threads.append(t)\
+\
+for t in threads:\
+    t.start()\
+\
+for t in threads:\
+    t.join()\
+\
+print("End")\
+>>> 5\'c3\'ca\'c1\'a4\'b5\'b5 \'bc\'d2\'bf\'e4\'a1\'a6\
+\
+\'c0\'cc\'b7\'b1\'b0\'d4 \'c0\'d6\'b4\'d9\'c7\'cf\'b4\'eb~~\
+\
+\
+\
+\
+}

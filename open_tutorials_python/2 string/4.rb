@@ -1,0 +1,8 @@
+puts("donggeun's \"tutorial\"")
+puts('donggeun\'s "tutorial"')
+puts("\\")
+puts("hello\nworld")
+puts("Hello\tworld")
+puts("Hello\t\tworld")
+puts("Hello\n\nworld")
+puts("\a")
